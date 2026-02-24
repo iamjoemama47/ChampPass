@@ -1,0 +1,32 @@
+{% extends 'basev2.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+<center>
+<div>
+    <h1>Wijzigen wachtwoord</h1>
+    <form action="/changepw" method="POST">
+        <table>
+            <tr>
+                <td>nieuw paswoord:</td>
+                <td><input type="password" name="pw1" id="pw1"></td>
+            </tr>
+            <tr>
+                <td>herhaal paswoord:</td>
+                <td><input type="password" name="pw2" id="pw2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="wijzig wachtwoord"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>{{the_comment}}</td>
+            </tr>
+        </table>
+    </form>
+</div>
+</center>
+{% endblock %}
