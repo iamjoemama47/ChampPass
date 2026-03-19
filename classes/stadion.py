@@ -1,3 +1,6 @@
+import mysql.connector
+from classes.dbconfig import Connect
+
 class stadion ():
     def __init__(self,stadion_ID=None,stadion_naam=None,stadion_zetels=None):
         self.stadion_ID=stadion_ID
