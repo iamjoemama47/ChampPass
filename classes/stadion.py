@@ -24,6 +24,14 @@ class stadion ():
             return Stadion(*result)
         else:
             return None
+    
+    def lijst_stadion(the_db):
+        sqltxt = "Select stadion_ID,stadion_naam,stadion_zetels FROM klanten stadion_ID"
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt)
+        result = mycursor.fetchall()
+        mycursor.close()
+        return [Stadion(*row) for row in result]
         
         
     def update (self,the_db):
