@@ -21,6 +21,6 @@ class Wedstrijd ():
     def aflassen():
         pass
     
-    def lijstMatchen ():
+    def lijstWedstrijden ():
         pass
         
