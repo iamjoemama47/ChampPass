@@ -25,3 +25,11 @@ class Gemeente:
             Gemeente(*result)
         else:
             return None
+        
+    def lijst_gemeentes(the_db):
+        sqltxt = "SELECT gemeente_ID, gemeenteNaam, postcode, landCode"
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt)
+        result = mycursor.fetchall()
+        mycursor.close()
+        return [Gemeente(*row) for row in result]
