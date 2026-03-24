@@ -23,7 +23,7 @@ class ploeg:
         result= mycursor.fetchone()
         mycursor.close()
         if result:
-            return Ploeg(*result)
+            return ploeg(*result)
         else:
             return None
         
@@ -34,7 +34,7 @@ class ploeg:
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()
         mycursor.close()
-        return [Ploeg(*row) for row in result]
+        return [ploeg(*row) for row in result]
 
     def updatePloeg(self,the_db):
         sqltxt="UPDATE Ploeg set ploeg_ID=%s,stadion_ID=%s,ploeg_naam=%s, aantal_spelers=%s, gemeente_ID=%s WHERE ploeg_ID=%s"
