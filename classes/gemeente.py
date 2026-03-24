@@ -16,7 +16,7 @@ class Gemeente:
         mycursor.close()
 
     def readGemeente(the_db, gemeenteNaam):
-        sqltxt =  "SELECT gemeenteNaam, postcoden landCode FROM gemeente where gemeenteNaam like %s"
+        sqltxt =  "SELECT gemeenteNaam, postcoden, landCode FROM gemeente where gemeenteNaam like %s"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt,(gemeenteNaam,))
         result = mycursor.fetchone()
