@@ -7,7 +7,37 @@ class stadion ():
         self.stadion_naam=stadion_naam
         self.stadion_zetels=stadion_zetels
         
-    def CRUD ():
-        pass
+    def creat (self,the_db):
+        sqltxt="insert into Stadion(stdion_ID, stadion_naam, stadion_zetels)Values(%s,%s,%s)"
+        mycursor=the_db.cursour()
+        mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.stadion_zetels))
+        mycursor.close()
+    
+    
+    def read (the_db,klaid):
+        sqltxt= "Select stadion_ID,stadion_naam,stadion_zetels FROM klanten stadion_ID like %s"
+        mycursor=the_db.cursour()
+        mycursor.execute(sqltxt,(klaid))
+        result= mycursor.fetchone()
+        mycursor.close()
+        if result:
+            return Stadion(*result)
+        else:
+            return None
+        
+        
+    def update (self,the_db):
+        sqltxt="UPDATE Stadion set stdion_ID=%s, stadion_naam=%s, stadion_zetels=%s WHERE nr=%s"
+        mycursor=the_db.cursour()
+        mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.stadion_zetels))
+        mycursor.close()
+
+        
+    def delete (the_db,nr):
+        sqltxt="DELETE from klanten WHERE nr=%s"
+        mycursor=the_db.cursor()
+        mycursor.execute(sqltxt,(nr,))
+        mycursor.close()
+        
         
     
