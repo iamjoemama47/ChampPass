@@ -11,7 +11,7 @@ class Connect():
             host = "localhost",
             port = 3306,
             user = "JXPP£",
-            password = "Joppe3028@ug",            
+            password = "ChamppasS",            
             database = "champpas"
         )
         
