@@ -31,6 +31,17 @@ class Gebruiker ():
             return None
 
 
+    def get_by_id (the_db,id):
+        sqltxt = "SELECT id, naam, paswoord, email, create_time FROM gebruikers WHERE id = %s "
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt,(id,))
+        result = mycursor.fetchone()
+        mycursor.close()
+        if result:
+            return Gebruiker(*result)
+        else:
+            return None
+
 
     def change_pw(the_db,naam,pw):
         sqltxt = "UPDATE gebruikers SET paswoord = %s WHERE naam = %s"
@@ -38,6 +49,16 @@ class Gebruiker ():
         mycursor.execute(sqltxt,(pw,naam))
         the_db.mydb.commit()
         mycursor.close()
+
+    def lijst_gebruikers(the_db):
+        sqltxt = "SELECT id, naam, paswoord, email, create_time FROM gebruikers"
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt)
+        result = mycursor.fetchall()
+        mycursor.close()
+        return [Gebruiker(*row) for row in result]
+
+
 
 
 if __name__ == "__main__":
