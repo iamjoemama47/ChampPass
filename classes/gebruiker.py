@@ -41,7 +41,7 @@ class Gebruiker ():
             return Gebruiker(*result)
         else:
             return None
-
+ 
 
     def change_pw(the_db,naam,pw):
         sqltxt = "UPDATE gebruikers SET paswoord = %s WHERE naam = %s"
