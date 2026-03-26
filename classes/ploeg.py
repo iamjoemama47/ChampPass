@@ -10,6 +10,9 @@ class Ploeg:
         self.gemeente_ID = gemeente_ID
         self.stadion_ID = stadion_ID
 
+    def __repr__(self):
+        return f'Ploeg (ploeg_naam={self.ploeg_naam}, aantal_speler={self.aantal_spelers}, ploeg_ID={self.ploeg_ID}), gemeente_ID={self.gemeente_ID}, stadion_ID={self.stadion_ID})'
+    
     def createPloeg(self,the_db):
         sqltxt="insert into Ploeg(ploeg_ID, ploeg_naam, stadion_ID,gemeente_ID,aantal_spelers)Values(%s,%s,%s,%s,%s)"
         mycursor=the_db.cursour()

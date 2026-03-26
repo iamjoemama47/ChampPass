@@ -7,6 +7,7 @@ class Ticket():
         self.aantal_ticket=aantal_ticket
     def __repr__(self):
         return f'ticket(ticket_id={self.ticket_id},prijs={self.prijs}, klant_ID={self.klant_ID}, match_ID={self.match_ID}, aantal_ticket={self.aantal_ticket})'
+    
     def kopen ():
         pass
     def betalen():
