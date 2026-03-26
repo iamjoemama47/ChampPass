@@ -18,10 +18,10 @@ class Ploeg:
         mycursor.execute(sqltxt,(self.ploeg_Naam,self.ploeg_ID,self.gemeente_ID,self.stadion_ID))
         mycursor.close()
 
-    def readPloeg(the_db,klaid):
-        sqltxt= "Select ploeg_ID,stadion_ID,ploeg_Naam,gemeente_ID FROM ploeg like %s"
-        mycursor=the_db.cursour()
-        mycursor.execute(sqltxt,(klaid))
+    def readPloeg(the_db,ploeg_Naam):
+        sqltxt= "Select ploeg_ID,stadion_ID,ploeg_Naam,gemeente_ID FROM ploeg where ploeg_Naam like %s"
+        mycursor=the_db.cursor()
+        mycursor.execute(sqltxt,(ploeg_Naam))
         result= mycursor.fetchone()
         mycursor.close()
         if result:
