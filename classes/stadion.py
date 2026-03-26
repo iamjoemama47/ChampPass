@@ -2,18 +2,18 @@ import mysql.connector
 from classes.dbconfig import Connect
 
 class Stadion ():
-    def __init__(self,stadion_ID=None,stadion_naam=None,stadion_zetels=None):
+    def __init__(self,stadion_ID=None,stadion_Naam=None,aantal_zetels=None):
         self.stadion_ID=stadion_ID
-        self.stadion_naam=stadion_naam
-        self.stadion_zetels=stadion_zetels
+        self.stadion_Naam=stadion_Naam
+        self.aantal_zetels=aantal_zetels
         
     def __repr__(self):
-        return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_naam}, stadion_zetels={self.stadion_zetels})'
+        return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_Naam}, aantal_zetels={self.aantal_zetels})'
         
     #def create (self,the_db):
-      #  sqltxt= "insert into Stadion(stadion_ID, stadion_Naam, stadion_zetels) Values(%s,%s,%s)"
+      #  sqltxt= "insert into Stadion(stadion_ID, stadion_Naam, aantal_zetels) Values(%s,%s,%s)"
      #   mycursor=the_db.cursor()
-      #  mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.stadion_zetels))
+      #  mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.aantal_zetels))
       #  mycursor.close()
     
     
@@ -29,7 +29,7 @@ class Stadion ():
             return None
     
     def lijst_stadion(the_db):
-        sqltxt = "Select stadion_ID,stadion_naam,aantal_zetels FROM stadion"
+        sqltxt = "Select stadion_ID,stadion_Naam,aantal_zetels FROM stadion"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt,)
         result = mycursor.fetchall()
@@ -37,13 +37,13 @@ class Stadion ():
         return [Stadion(*row) for row in result]
 
         
-    def update (self,the_db):
-        sqltxt="UPDATE Stadion set stadion_naam=%s, stadion_zetels=%s WHERE nr=%s"
+    def update (the_db ,stadion_Naam ,aantal_zetels ,stadion_ID):
+        sqltxt="UPDATE stadion SET stadion_Naam=%s, aantal_zetels=%s WHERE stadion_ID=%s"
         mycursor=the_db.cursor()
-        mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.stadion_zetels))
+        mycursor.execute(sqltxt,(stadion_Naam, aantal_zetels, stadion_ID,))
         mycursor.close()
 
-        
+
     def delete (the_db,nr):
         sqltxt="DELETE from klanten WHERE nr=%s"
         mycursor=the_db.cursor()
