@@ -1,0 +1,19 @@
+{% extends 'basev2.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+<center>
+<div>
+    <h1>Gebruikers</h1>
+   <p>
+        <table>
+            <tr><td>id:</td>      <td >{{ gebruiker.id }}</a></td> </tr>
+            <tr><td>naam:</td>    <td >{{ gebruiker.naam }}</td></tr>
+            <tr><td>email:</td>   <td >{{ gebruiker.email }}</td></tr>
+        </table>
+    </p>
+</div>
+</center>
+{% endblock %}

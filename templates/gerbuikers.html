@@ -1,0 +1,32 @@
+
+{% extends 'basev2.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+<center>
+<div>
+    <h1>Gebruikers</h1>
+   <p>
+        <table style="border: 1px solid black;">
+            <tr></tr>
+                <th style="outline: thin solid">ID</th>
+                <th style="outline: thin solid">Naam</th>
+                <th style="outline: thin solid">Email</th>
+                <th style="outline: thin solid">Aangemaakt op</th>
+            </tr>
+             {% for gebruiker in gebruikers %}
+            <tr>
+                <td style="outline: thin solid"><a href="/gebruikerdetail/{{ gebruiker.id }}">{{ gebruiker.id }}</a></td>
+                <td style="outline: thin solid">{{ gebruiker.naam }}</td>
+                <td style="outline: thin solid">{{ gebruiker.email }}</td>
+                <td style="outline: thin solid">{{ gebruiker.create_time }}</td>
+                 
+            </tr>
+            {% endfor %}
+        </table>
+    </p>
+</div>
+</center>
+{% endblock %}
