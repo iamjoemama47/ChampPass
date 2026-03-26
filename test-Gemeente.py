@@ -2,8 +2,6 @@ import mysql.connector
 from classes.dbconfig import Connect
 import classes.gemeente
 
-from classes.dbconfig import Connect
-from classes.gemeente import Gemeente
 
 def test_database():
     # 1. Verbinding maken
