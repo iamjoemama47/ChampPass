@@ -21,7 +21,7 @@ class stadion ():
         result= mycursor.fetchone()
         mycursor.close()
         if result:
-            return Stadion(*result)
+            return stadion(*result)
         else:
             return None
     
@@ -31,7 +31,7 @@ class stadion ():
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()
         mycursor.close()
-        return [Stadion(*row) for row in result]
+        return [stadion(*row) for row in result]
         
         
     def update (self,the_db):
