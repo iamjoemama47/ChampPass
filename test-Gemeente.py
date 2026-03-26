@@ -23,6 +23,6 @@ print (myGemeente)
 myGemeente = Gemeente.lijst_gemeentes(mydb)
 print(myGemeente)
 
-myGemeente = Gemeente.createGemeente(mydb, 'Nieuwpoort', '8400', 'BEL')
+myGemeente = Gemeente.createGemeente(mydb, 'Zeebrugge', 8380, 'BE')
 print(myGemeente)
 

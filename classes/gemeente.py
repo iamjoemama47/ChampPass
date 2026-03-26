@@ -17,8 +17,9 @@ class Gemeente:
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt, (gemeente_naam, postcode, land_Code))
         mycursor.execute("commit")
-        #the_db.commit()
         mycursor.close()
+        return Gemeente(gemeente_naam=gemeente_naam, postcode=postcode, land_Code=land_Code)    
+        
 
 
     def readGemeente(the_db, gemeente_naam):
