@@ -16,7 +16,8 @@ class Gemeente:
         sqltxt = "INSERT INTO gemeente (gemeente_naam, postcode, land_Code) VALUES (%s, %s, %s)"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt, (gemeente_naam, postcode, land_Code))
-        the_db.commit()
+        mycursor.execute("commit")
+        #the_db.commit()
         mycursor.close()
 
 
