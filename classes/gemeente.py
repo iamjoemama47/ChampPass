@@ -3,11 +3,14 @@ from classes.dbconfig import Connect
 
 
 class Gemeente:
-    def __init__(self, gemeente_ID=None, gemeenteNaam=None, postcode=None,landCode=None):
+    def __init__(self, gemeente_ID=None, gemeente_naam=None, post_code=None,land_code=None):
         self.gemeente_ID = gemeente_ID
-        self.gemeenteNaam = gemeenteNaam
-        self.postcode = postcode
-        self.landCode = landCode
+        self.gemeente_naam = gemeente_naam
+        self.post_code = post_code
+        self.land_code = land_code
+    
+    def __repr__(self):
+        return f'gemeente(gemeente_ID={self.gemeente_ID},gemeente_naam={self.gemeente_naam}, post_code{self.post_code}, land_code={self.land_code})'
 
     def createGemeente(self,the_db):
         sqltxt = "INSERT INTO gemeente (gemeenteNaam, postcode, landCode) VALUES (%s, %s, %s)"

@@ -7,6 +7,9 @@ class Stadion ():
         self.stadion_naam=stadion_naam
         self.stadion_zetels=stadion_zetels
         
+    def __repr__(self):
+        return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_naam}, stadion_zetels={self.stadion_zetels})'
+        
     def create (self,the_db):
         sqltxt="insert into Stadion( stadion_naam, stadion_zetels)Values(%s,%s,%s)"
         mycursor=the_db.cursour()
