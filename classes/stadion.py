@@ -11,8 +11,8 @@ class Stadion ():
         return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_naam}, stadion_zetels={self.stadion_zetels})'
         
     def create (self,the_db):
-        sqltxt="insert into Stadion( stadion_naam, stadion_zetels)Values(%s,%s,%s)"
-        mycursor=the_db.cursour()
+        sqltxt="insert into Stadion(stadion_ID, stadion_naam, stadion_zetels)Values(%s,%s,%s)"
+        mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.stadion_zetels))
         mycursor.close()
     
@@ -39,7 +39,7 @@ class Stadion ():
         
     def update (self,the_db):
         sqltxt="UPDATE Stadion set stadion_naam=%s, stadion_zetels=%s WHERE nr=%s"
-        mycursor=the_db.cursour()
+        mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(self.stadion_ID,self.stadion_naam, self.stadion_zetels))
         mycursor.close()
 
