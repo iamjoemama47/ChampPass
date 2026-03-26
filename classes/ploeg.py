@@ -2,7 +2,7 @@ import mysql.connector
 from classes.dbconfig import Connect
 
 
-class ploeg:
+class Ploeg:
     def __init__(self, ploeg_naam=None, aantal_spelers=None, ploeg_ID=None, gemeente_ID=None, stadion_ID =None):
         self.ploeg_naam = ploeg_naam
         self.aantal_spelers = aantal_spelers
@@ -23,7 +23,7 @@ class ploeg:
         result= mycursor.fetchone()
         mycursor.close()
         if result:
-            return ploeg(*result)
+            return Ploeg(*result)
         else:
             return None
         
@@ -34,7 +34,7 @@ class ploeg:
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()
         mycursor.close()
-        return [ploeg(*row) for row in result]
+        return [Ploeg(*row) for row in result]
 
     def updatePloeg(self,the_db):
         sqltxt="UPDATE Ploeg set ploeg_ID=%s,stadion_ID=%s,ploeg_naam=%s, aantal_spelers=%s, gemeente_ID=%s WHERE ploeg_ID=%s"

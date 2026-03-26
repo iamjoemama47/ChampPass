@@ -1,7 +1,7 @@
 import mysql.connector
 from classes.dbconfig import Connect
 
-class stadion ():
+class Stadion ():
     def __init__(self,stadion_ID=None,stadion_naam=None,stadion_zetels=None):
         self.stadion_ID=stadion_ID
         self.stadion_naam=stadion_naam
@@ -21,7 +21,7 @@ class stadion ():
         result= mycursor.fetchone()
         mycursor.close()
         if result:
-            return stadion(*result)
+            return Stadion(*result)
         else:
             return None
     
@@ -31,7 +31,7 @@ class stadion ():
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()
         mycursor.close()
-        return [stadion(*row) for row in result]
+        return [Stadion(*row) for row in result]
         
         
     def update (self,the_db):

@@ -1,4 +1,4 @@
-class ticket():
+class Ticket():
     def __init__(self,ticket_id=None,prijs=None,klant_ID=None,match_ID=None, aantal_ticket =None):
         self.ticket_id=ticket_id
         self.prijs = prijs
