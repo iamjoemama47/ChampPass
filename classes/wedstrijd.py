@@ -21,6 +21,11 @@ class Wedstrijd ():
     def aflassen():
         pass
     
-    def lijstMatchen ():
-        pass
+    def lijstMatchen (the_db):
+        sqltxt = "Select stadion_ID,stadion_naam,stadion_zetels FROM klanten stadion_ID"
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt)
+        result = mycursor.fetchall()
+        mycursor.close()
+        return [Match(*row) for row in result]
         
