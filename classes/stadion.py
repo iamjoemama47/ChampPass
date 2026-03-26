@@ -17,10 +17,10 @@ class Stadion ():
         mycursor.close()
     
     
-    def read (the_db,klaid):
-        sqltxt= "Select stadion_ID,stadion_naam,stadion_zetels FROM klanten stadion_ID like %s"
-        mycursor=the_db.cursour()
-        mycursor.execute(sqltxt,(klaid))
+    def read (the_db,stadion_ID):
+        sqltxt= "Select stadion_ID ,stadion_Naam , aantal_zetels FROM stadion WHERE stadion_Naam LIKE %s"
+        mycursor=the_db.cursor()
+        mycursor.execute(sqltxt,(stadion_ID,))
         result= mycursor.fetchone()
         mycursor.close()
         if result:
