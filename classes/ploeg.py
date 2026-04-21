@@ -13,15 +13,15 @@ class Ploeg:
         return f'Ploeg (ploeg_Naam={self.ploeg_Naam}, ploeg_ID={self.ploeg_ID}), gemeente_ID={self.gemeente_ID}, stadion_ID={self.stadion_ID})'
     
     def createPloeg(self,the_db):
-        sqltxt="insert into Ploeg(ploeg_ID, ploeg_Naam, stadion_ID,gemeente_ID)Values(%s,%s,%s,%s)"
-        mycursor=the_db.cursour()
+        sqltxt="insert into Ploeg(ploeg_ID,ploeg_Naam, stadion_ID,gemeente_ID)Values(%s,%s,%s,%s)"
+        mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(self.ploeg_Naam,self.ploeg_ID,self.gemeente_ID,self.stadion_ID))
         mycursor.close()
 
-    def readPloeg(the_db,ploeg_Naam):
+    def readPloeg(the_db,ploeg_ID):
         sqltxt= "Select ploeg_ID,stadion_ID,ploeg_Naam,gemeente_ID FROM ploeg where ploeg_Naam like %s"
         mycursor=the_db.cursor()
-        mycursor.execute(sqltxt,(ploeg_Naam))
+        mycursor.execute(sqltxt,(ploeg_ID))
         result= mycursor.fetchone()
         mycursor.close()
         if result:
@@ -31,7 +31,7 @@ class Ploeg:
         
     
     def lijst_ploeg(the_db):
-        sqltxt = "SELECT ploeg_ID, ploeg_Naam, stadion_ID, gemeente_ID, aantal_spelers FROM ploeg"
+        sqltxt = "SELECT ploeg_ID, ploeg_Naam, stadion_ID, gemeente_ID FROM ploeg"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()
@@ -40,7 +40,7 @@ class Ploeg:
 
     def updatePloeg(self,the_db):
         sqltxt="UPDATE Ploeg set ploeg_ID=%s,stadion_ID=%s,ploeg_Naam=%s, gemeente_ID=%s WHERE ploeg_ID=%s"
-        mycursor=the_db.cursour()
+        mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(self.ploeg_Naam,self.ploeg_ID,self.gemeente_ID,self.stadion_ID))
         mycursor.close()
 
