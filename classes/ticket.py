@@ -13,10 +13,10 @@ class Ticket():
     def betalen():
         pass
     
-    def createTicket(self,the_db):
-        sqltxt="insert into ticket(ticket_ID, prijs, klant_ID,match_ID)Values(%s,%s,%s,%s)"
-        mycursor=the_db.cursour()
-        mycursor.execute(sqltxt,(self.ticket_ID,self.prijs,self.klant_ID,self.match_ID))
+    def createTicket(the_db, ticket_ID, prijs, klant_ID, match_ID):
+        sqltxt = "INSERT INTO ticket (ticket_ID, prijs, klant_ID, match_ID) VALUES (%s, %s, %s, %s)"
+        mycursor = the_db.cursor() 
+        mycursor.execute(sqltxt, (ticket_ID, prijs, klant_ID, match_ID,))
         mycursor.close()
 
 
