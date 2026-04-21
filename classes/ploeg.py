@@ -30,7 +30,7 @@ class Ploeg:
             return None
         
     
-    def lijst_ploeg(the_db):
+    def lijstPloeg(the_db):
         sqltxt = "SELECT ploeg_ID, ploeg_Naam, stadion_ID, gemeente_ID FROM ploeg"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt)

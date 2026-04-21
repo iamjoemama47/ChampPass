@@ -11,7 +11,7 @@ myPloeg = Ploeg.readPloeg(mydb,"KAA Gent")
 print(myPloeg)
 
 #lijst
-myPloeg = Ploeg.lijst_ploeg(mydb)
+myPloeg = Ploeg.lijstPloeg(mydb)
 print(myPloeg)
 
 

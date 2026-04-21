@@ -7,5 +7,5 @@ import classes.dbconfig as db
 mydb = db.Connect()
 
 #lijst
-myWedstrijd = Wedstrijd.lijstMatchen(mydb)
+myWedstrijd = Wedstrijd.lijstWedstrijden(mydb)
 print(myWedstrijd)
