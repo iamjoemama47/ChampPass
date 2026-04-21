@@ -22,8 +22,8 @@ class Ticket():
 
     def updateTicket(the_db,ticket_ID,prijs,klant_ID,match_ID):
         sqltxt="UPDATE ticket set ticket_ID=%s,prijs=%s,klant_ID=%s,match_ID=%s WHERE ticket_ID=%s"
-        mycursor=the_db.cursour()
-        mycursor.execute(sqltxt,(ticket_ID,prijs,klant_ID,match_ID))
+        mycursor=the_db.cursor()
+        mycursor.execute(sqltxt,(ticket_ID,prijs,klant_ID,match_ID,))
         mycursor.close()
 
     def deleteTicket(the_db,ticket_ID):

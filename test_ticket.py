@@ -21,7 +21,7 @@ mydb = db.Connect()
 
 
 #update 
-myTicket=Ticket.createTicket(mydb,"1","40","2","1")
+myTicket=Ticket.updateTicket(mydb,"1","40","2","1")
 print(myTicket)
 
 
