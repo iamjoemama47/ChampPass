@@ -13,6 +13,7 @@ import mysql.connector
 from classes.ticket import Ticket
 
 from classes.ticket import *
+import classes.dbconfig as db
 
 
 mydb = db.Connect()
@@ -21,7 +22,11 @@ mydb = db.Connect()
 
 
 #update 
-myTicket=Ticket.updateTicket(mydb,"1","40","2","1")
+myTicket=Ticket.updateTicket(mydb,"1","40")
+print(myTicket)
+
+# delete 
+myTicket=Ticket.deleteTicket(mydb,3)
 print(myTicket)
 
 
