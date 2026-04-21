@@ -38,14 +38,14 @@ class Ploeg:
         mycursor.close()
         return [Ploeg(*row) for row in result]
 
-    def updatePloeg(self,the_db):
-        sqltxt="UPDATE Ploeg set ploeg_ID=%s,stadion_ID=%s,ploeg_Naam=%s, gemeente_ID=%s WHERE ploeg_ID=%s"
-        mycursor=the_db.cursor()
-        mycursor.execute(sqltxt,(self.ploeg_Naam,self.ploeg_ID,self.gemeente_ID,self.stadion_ID))
-        mycursor.close()
+    #def updatePloeg(the_db):
+     #   sqltxt="UPDATE Ploeg set ploeg_ID=%s,stadion_ID=%s,ploeg_Naam=%s, gemeente_ID=%s WHERE ploeg_ID=%s"
+      #  mycursor=the_db.cursor()
+       # mycursor.execute(sqltxt,(ploeg_Naam,ploeg_ID,self.gemeente_ID,self.stadion_ID))
+        #mycursor.close()
 
     def deletePloeg(the_db,ploeg_ID):
-        sqltxt="DELETE from Ploeg WHERE ploeg_ID=%s"
+        sqltxt="DELETE from Ploeg WHERE ploeg_Naam=%s"
         mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(ploeg_ID,))
         mycursor.close()
