@@ -13,3 +13,5 @@ print(myPloeg)
 #lijst
 myPloeg = Ploeg.lijst_ploeg(mydb)
 print(myPloeg)
+
+
