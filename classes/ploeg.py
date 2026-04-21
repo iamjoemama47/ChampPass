@@ -12,13 +12,13 @@ class Ploeg:
     def __repr__(self):
         return f'Ploeg (ploeg_ID={self.ploeg_ID},ploeg_Naam={self.ploeg_Naam}, gemeente_ID={self.gemeente_ID}, stadion_ID={self.stadion_ID})'
     
-    def createPloeg(self,the_db):
-        sqltxt="insert into Ploeg (ploeg_ID, ploeg_Naam, stadion_ID, gemeente_ID)Values(%s,%s,%s,%s)"
-        mycursor=the_db.cursor()
-        mycursor.execute(sqltxt,(self.ploeg_Naam,self.ploeg_ID,self.gemeente_ID,self.stadion_ID))
-        mycursor.close()
+    #def createPloeg(the_db, ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID):
+     #   sqltxt="insert into Ploeg (ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID)Values(%s,%s,%s,%s)"
+      #  mycursor=the_db.cursor()
+       # mycursor.execute(sqltxt,(ploeg_Naam, ploeg_ID, gemeente_ID, stadion_ID,))
+        #mycursor.close()
 
-    def readPloeg(the_db,ploeg_ID):
+    def readPloeg(the_db, ploeg_ID):
         sqltxt= "Select ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID FROM ploeg where ploeg_Naam like %s"
         mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(ploeg_ID,))
