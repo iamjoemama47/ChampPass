@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, session
 
-home = Blueprint('home', __name__)
+home_bp = Blueprint('home', __name__)
 
-@home.route('/')
+@home_bp.route('/')
 def home():
     if 'login' not in session:  # check of sessie-variabele login bestaat
         return render_template('login.html')
