@@ -20,7 +20,6 @@ mydb = db.Connect()
 
 
 
-
 #update 
 myTicket=Ticket.updateTicket(mydb,"1","40")
 print(myTicket)
