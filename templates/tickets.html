@@ -1,0 +1,34 @@
+
+{% extends 'basev2.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+<center>
+<div>
+    <h1>tickets</h1>
+   <p>
+        <table style="border: 1px solid black;">
+            <tr></tr>
+                <th style="outline: thin solid">ticket_ID</th>
+                <th style="outline: thin solid">prijs</th>
+                <th style="outline: thin solid">klant_ID</th>
+                <th style="outline: thin solid">match_ID</th>
+                <th style="outline: thin solid">aantal_tickets</th>
+            </tr>
+             {% for ticket in tickets %}
+
+            <tr>
+                <td style="outline: thin solid"><a href="/ticketdetail/{{ ticket.ticket_ID }}">{{ ticket.ticket_ID }}</a></td>
+                <td style="outline: thin solid">{{ ticket.prijs }}</td>
+                <td style="outline: thin solid">{{ ticket.klant_ID }}</td>
+                <td style="outline: thin solid">{{ ticket.match_ID }}</td>
+                <td style="outline: thin solid">{{ ticket.aantal_tickets }}</td>    
+            </tr>
+            {% endfor %}
+        </table>
+    </p>
+</div>
+</center>
+{% endblock %}
