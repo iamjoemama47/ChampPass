@@ -1,7 +1,7 @@
 
 from flask import Blueprint
 
-from .home import home_bp
+from .homePage import home_bp
 from .about import about_bp
 from .contact import contact_bp
 from .login import login_bp
