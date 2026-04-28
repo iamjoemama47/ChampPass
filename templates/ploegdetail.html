@@ -1,0 +1,20 @@
+{% extends 'basev2.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+<center>
+<div>
+    <h1>ploeg</h1>
+   <p>
+        <table>
+            <tr><td>id:</td>      <td >{{ ploeg.ploeg_ID }}</a></td> </tr>
+            <tr><td>naam:</td>    <td >{{ ploeg.ploeg_naam }}</td></tr>
+            <tr><td>gemeente_ID:</td>   <td >{{ ploeg.gemeente_ID }}</td></tr>
+            <tr><td>stadion_ID:</td>   <td >{{ ploeg.stadion_ID }}</td></tr>
+        </table>
+    </p>
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,33 @@
+
+{% extends 'basev2.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+<center>
+<div>
+    <h1>Ploeg</h1>
+   <p>
+        <table style="border: 1px solid black;">
+            <tr></tr>
+                <th style="outline: thin solid">ploeg_ID</th>
+                <th style="outline: thin solid">ploeg_naam</th>
+                <th style="outline: thin solid">gemeente_ID</th>
+                <th style="outline: thin solid">stadion_ID</th>
+            </tr>
+             {% for ploeg in ploeg %}
+
+            <tr>
+                <td style="outline: thin solid"><a href="/ploegdetail/{{ ploeg.ploeg_ID }}">{{ ploeg.ploeg_ID }}</a></td>
+                <td style="outline: thin solid">{{ ploeg.ploeg_naam }}</td>
+                <td style="outline: thin solid">{{ ploeg.gemeente_ID }}</td>
+                <td style="outline: thin solid">{{ ploeg.stadion_ID }}</td>
+                 
+            </tr>
+            {% endfor %}
+        </table>
+    </p>
+</div>
+</center>
+{% endblock %}
