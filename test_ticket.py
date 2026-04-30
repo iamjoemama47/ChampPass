@@ -28,6 +28,6 @@ print(myTicket)
 myTicket=Ticket.deleteTicket(mydb,3)
 print(myTicket)
 
-#crear 
+#create
 myTicket=Ticket.createTicket(mydb,"5","60","1","1")
 print(myTicket)
