@@ -1,20 +1,27 @@
-from flask import Blueprint, render_template
-
+from flask import Blueprint, render_template, abort
 import classes.dbconfig as db
 import mysql.connector
 from classes.shop import shop
 
-
 shopdetail_bp = Blueprint('shopdetail', __name__)
-mydb = db.Connect()
 
 @shopdetail_bp.route('/shopdetail/<int:shop_id>')
 def shopdetail(shop_id):
-
+    myshop = None  
+    
     try:
-        myshop=shop.get_by_id(mydb,shop_id)
+
+        mydb = db.Connect() 
+        myshop = shop.get_by_id(mydb, shop_id)
+        
+
+
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van shop: {e}")
-        lijstshop = []
+        return "Er is een databasefout opgetreden.", 500
 
-    return render_template('shopdetail.html',shop = myshop)
+
+    if myshop is None:
+        abort(404, description="Shop niet gevonden")
+
+    return render_template('shopdetail.html', shop=myshop)
