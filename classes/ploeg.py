@@ -50,3 +50,4 @@ class Ploeg:
         mycursor.execute(sqltxt,(ploeg_ID,))
         mycursor.close()
     
+    def get_by_id(the_db, ploeg_ID):
