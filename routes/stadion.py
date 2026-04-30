@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 
 import classes.dbconfig as db
-from classes.ploeg import Stadion
+from classes.stadion import Stadion
 import mysql.connector
 
 stadion_bp = Blueprint('stadion', __name__)

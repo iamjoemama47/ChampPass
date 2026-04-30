@@ -1,6 +1,4 @@
 
-
-
 from flask import Blueprint, render_template, session
 
 contact_bp = Blueprint('contact', __name__)
@@ -15,6 +13,7 @@ def contact():
     #einde check login
 
     #hier komt de code voor de contactpagina
+    
     pass
 
     return render_template('contact.html')
