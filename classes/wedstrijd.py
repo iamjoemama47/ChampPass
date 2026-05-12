@@ -2,18 +2,17 @@ import mysql.connector
 from classes.dbconfig import Connect
 
 class Wedstrijd ():
-    def __init__(self, wedstrijd_ID=None,begin_Uur=None,eind_Uur=None,ploeg_1=None,ploeg_2=None,stadion_ID=None,score_ploeg_1=None,score_ploeg_2=None):
+    def __init__(self, wedstrijd_ID=None,begin_Uur=None,eind_Uur=None,ploeg_Naam=None,stadion_Naam=None,score_ploeg_1=None,score_ploeg_2=None):
         self.wedstrijd_ID=wedstrijd_ID
         self.begin_Uur=begin_Uur
         self.eind_Uur=eind_Uur
-        self.ploeg_1=ploeg_1
-        self.ploeg_2=ploeg_2
-        self.stadion_ID=stadion_ID
+        self.ploeg_Naam=ploeg_Naam
+        self.stadion_Naam=stadion_Naam
         self.score_ploeg_1=score_ploeg_1
         self.score_ploeg_2=score_ploeg_2
         
     def __repr__(self):
-        return f'wedstijd (wedstrijd_ID={self.wedstrijd_ID},begin_Uur={self.begin_Uur}, eind_Uur={self.eind_Uur}, ploeg_1={self.ploeg_1}, ploeg_2={self.ploeg_2},stadion_ID={self.stadion_ID},score_ploeg_1={self.score_ploeg_1},score_ploeg_2={self.score_ploeg_2})'
+        return f'wedstijd (wedstrijd_ID={self.wedstrijd_ID},begin_Uur={self.begin_Uur}, eind_Uur={self.eind_Uur}, ploeg_Naam={self.ploeg_Naam}, stadion_Naam={self.stadion_Naam},score_ploeg_1={self.score_ploeg_1},score_ploeg_2={self.score_ploeg_2})'
     
     def start ():
         pass
@@ -25,7 +24,7 @@ class Wedstrijd ():
         pass
     
     def lijstWedstrijden (the_db):
-        sqltxt = "Select wedstrijd_ID, begin_Uur, eind_Uur, ploeg_1, ploeg_2, stadion_ID, score_ploeg_1, score_ploeg_2 FROM wedstrijd"
+        sqltxt = "Select wedstrijd_ID, begin_Uur, eind_Uur, a1.ploeg_Naam, a1.logo_Img, a2.ploeg_Naam,a2.logo_Img,  stadion.stadion_Naam FROM wedstrijdinner join ploeg as a1  on wedstrijd.thuis = a1.ploeg_IDinner join ploeg as a2 on wedstrijd.bezoekers = a2.ploeg_IDinner join stadion on wedstrijd.stadion_ID = stadion.stadion_ID where  begin_Uur <= NOW() order by begin_Uur ASC;" 
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()
