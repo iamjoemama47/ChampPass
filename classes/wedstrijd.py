@@ -2,17 +2,20 @@ import mysql.connector
 from classes.dbconfig import Connect
 
 class Wedstrijd ():
-    def __init__(self, wedstrijd_ID=None,begin_Uur=None,eind_Uur=None,ploeg_Naam=None,stadion_Naam=None,score_ploeg_1=None,score_ploeg_2=None):
+    def __init__(self, wedstrijd_ID=None,begin_Uur=None,eind_Uur=None,ploeg_Naam1=None,logo_Img1=None,ploeg_Naam2=None,logo_Img2=None,stadion_Naam=None,score_ploeg_1=None,score_ploeg_2=None):
         self.wedstrijd_ID=wedstrijd_ID
         self.begin_Uur=begin_Uur
         self.eind_Uur=eind_Uur
-        self.ploeg_Naam=ploeg_Naam
+        self.ploeg_Naam1=ploeg_Naam1
+        self.logo_Img1=logo_Img1
+        self.ploeg_Naam2=ploeg_Naam2
+        self.logo_Img2=logo_Img2
         self.stadion_Naam=stadion_Naam
-        self.score_ploeg_1=score_ploeg_1
-        self.score_ploeg_2=score_ploeg_2
-        
+        #self.score_ploeg_1=score_ploeg_1
+        #self.score_ploeg_2=score_ploeg_2
+## zet hier alles van wat er in de onderste query wordt gevraagd
     def __repr__(self):
-        return f'wedstijd (wedstrijd_ID={self.wedstrijd_ID},begin_Uur={self.begin_Uur}, eind_Uur={self.eind_Uur}, ploeg_Naam={self.ploeg_Naam}, stadion_Naam={self.stadion_Naam},score_ploeg_1={self.score_ploeg_1},score_ploeg_2={self.score_ploeg_2})'
+        return f'wedstijd (wedstrijd_ID={self.wedstrijd_ID},begin_Uur={self.begin_Uur}, eind_Uur={self.eind_Uur}, ploeg_Naam1={self.ploeg_Naam1}, logo_Img1={self.logo_Img1}, ploeg_Naam2={self.ploeg_Naam2}, logo_Img2={self.logo_Img2}, stadion_Naam={self.stadion_Naam},score_ploeg_1={self.score_ploeg_1},score_ploeg_2={self.score_ploeg_2})'
     
     def start ():
         pass
