@@ -1,0 +1,267 @@
+{% extends 'base_Header.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+
+
+  <!-- Hero Section -->
+  <!-- TIP: To enable full-screen hero, uncomment "min-height: 100vh" in the .hero CSS -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>●</span> Top match at the moment 
+          </div>
+          <h1></span><span class="title">FC Barcelona </span><span class="highlight">against </span><span class="title">Newcastle United FC </span></h1>
+          <p class="hero-description">
+            Buy your tickets here for the best match of the moment: Who will win in the round of 16 Barcelona or Newcastle
+          </p>
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn-primary">
+            Vieuw prices →
+          </a>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">€ 300</div>
+            <div class="stat-label">Lowest price </div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">4.9</div>
+            <div class="stat-label">Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Interactive Guitar -->
+    <div class="hero-container-2"   
+      <div class="guitar-wrapper">
+        <div class="guitar-card">
+          <div class="guitar-header">
+            <span class="guitar-title">Barca VS Newcastle</span>
+          </div>
+          <div class="guitar-neck">
+            <img src="{{ url_for('static',filename='img/match achtergrond.jpg')}}" height="300" width="550">
+              <img class="logo"src="{{ url_for('static',filename='img/logos/arsenal.png')}}" height="40" width="40">
+          </div>
+          <div class="guitar-footer">
+            <div class="guitar-footer-row">
+              <div class="footer-controls">
+                <span class="guitar-title">Camp nou stadium</span>
+                <span class="guitar-title">30/02/2090</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scores Section -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Scores</div>
+        <h2 class="section-title">See the latest champions league scores here</h2>
+        <p class="section-description">
+          Our website provides a real time score update on the latest played matches.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <img class="logo"src="{{ url_for('static',filename='img/logos/arsenal.png')}}" height="40" width="40" 
+              <span> 1 - 1 </span>
+              <img class="logo"src="{{ url_for('static',filename='img/logos/real_Madrid.png ')}}" height="40" 
+            </svg>
+          </div>
+          <h3>Bayern - Arsenal</h3>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <img class="logo"src="{{ url_for('static',filename='img/logos/barca.png')}}" height="40" width="40" 
+              <span> 3 - 0 </span>
+              <img class="logo"src="{{ url_for('static',filename='img/logos/manchester_City.png')}}" height="40" width="40"
+            </svg>
+          </div>
+          <h3>Real Madrid - Barcelona</h3>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <img class="logo"src="{{ url_for('static',filename='img/logos/bayer.png')}}" height="40" width="40"
+              <span> 10 - 1 </span>
+              <img class="logo"src="{{ url_for('static',filename='img/logos/liverpool.png')}}" height="40" width="40"
+            </svg>
+          </div>
+          <h3>Liverpool - Sporting</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Tickets</div>
+        <h2 class="section-title">The best prices for you!</h2>
+        <p class="section-description">
+          Choose between different prices and experiences.
+        </p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Tickets</div>
+          <div class="pricing-price">
+            <span class="currency"></span>Barcelona VS Atletico Madrid
+              <img class="logo" src="logo's/barca.png" width="50" height="50" >
+              <p >-</p>  
+              <img class="logo" src="logo's/atletico.png" width="50" height="50">  
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">different experiences and prices</p>
+          <ul class="pricing-features">
+          </ul>
+          <a href="file:///C:/Users/JoppeWelvaert/OneDrive%20-%20Instituut%20Zusters%20Maricolen/informatica/template%20champpas%20site/tickets.html" class="pricing-btn">Vieuw prices</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Tickets</div>
+          <div class="pricing-price">
+            <span class="currency"></span>Barcelona VS Atletico Madrid
+              <img class="logo" src="logo's/barca.png" width="50" height="50" >
+              <p >-</p>  
+              <img class="logo" src="logo's/atletico.png" width="50" height="50">  
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">different experiences and prices</p>
+          <ul class="pricing-features">
+          </ul>
+          <a href="file:///C:/Users/JoppeWelvaert/OneDrive%20-%20Instituut%20Zusters%20Maricolen/informatica/template%20champpas%20site/tickets.html" class="pricing-btn">Vieuw prices</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Tickets</div>
+          <div class="pricing-price">
+            <span class="currency"></span>Barcelona VS Atletico Madrid
+              <img class="logo" src="logo's/barca.png" width="50" height="50" >
+              <p >-</p>  
+              <img class="logo" src="logo's/atletico.png" width="50" height="50">  
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">different experiences and prices</p>
+          <ul class="pricing-features">
+          </ul>
+          <a href="file:///C:/Users/JoppeWelvaert/OneDrive%20-%20Instituut%20Zusters%20Maricolen/informatica/template%20champpas%20site/tickets.html" class="pricing-btn">Vieuw prices</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- choose us Section -->
+  <section class="instructors" id="instructors">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label-2">Why choose us</div>
+        <h2 class="section-title-2">Key values to our company</h2>
+        <p class="section-description-2">
+          we are constantly trying to improve your eperience.
+        </p>
+      </div>
+      <div class="instructors-grid">
+        <div class="instructor-card">
+          <div ">
+            <img src="{{ url_for('static',filename='img/values/quality.png')}}" widht="200" height="200" >
+          </div>
+          <div class="instructor-name">QUALITY</div>
+          <div class="instructor-role">Best Value</div>
+          <p class="instructor-bio">direct colaboration with UEFA</p>
+        </div>
+        <div class="instructor-card">
+          <div >
+            <img src="{{ url_for('static',filename='img/values/personell.png')}}"  widht="200" height="200"  >
+          </div>
+          <div class="instructor-name">PERSONELL</div>
+          <div class="instructor-role">A vast team</div>
+          <p class="instructor-bio">Ensuring your happiness</p>
+        </div>
+        <div class="instructor-card">
+          <div >
+            <img src="{{ url_for('static',filename='img/values/innovation.png')}}"  widht="200" height="200"  >
+          </div>
+          <div class="instructor-name">INNOVATION</div>
+          <div class="instructor-role">Continiously adapting</div>
+          <p class="instructor-bio">Making sure you can get your tickets easely</p>
+        </div>
+        <div class="instructor-card">
+          <div >
+            <img src="{{ url_for('static',filename='img/values/trustworthy.png')}}"  widht="200" height="200" >
+          </div>
+          <div class="instructor-name">TRUSTWORTHY</div>
+          <div class="instructor-role">4.9 customer rating</div>
+          <p class="instructor-bio">Direct sale</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label-2">Revieuws</div>
+        <h2 class="section-title-2">What our customers think</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"De website is echt heel gebruiksvriendelijk en ik had mijn tickets voor de Champions League match in no-time geboekt, alles verliep perfect."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="{{ url_for('static',filename='img/user.png')}}" alt="Lars Vermeulen">
+            </div>
+            <div>
+              <div class="testimonial-name">Lars Vermeulen</div>
+              <div class="testimonial-title">Loyal Custommer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★</div>
+          <p class="testimonial-text">"Finally, a reliable site where you can buy tickets without worries; I was pleasantly surprised by the smooth service."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="{{ url_for('static',filename='img/user.png')}}" alt="Ahmed Karim">
+            </div>
+            <div>
+              <div class="testimonial-name">Ahmed Karim</div>
+              <div class="testimonial-title">Loyal Custommer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">De prijzen zijn heel correct en de bevestiging kwam meteen binnen, wat me veel vertrouwen gaf in de website. Verder verliep de verkoop vlot."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="{{ url_for('static',filename='img/user.png')}}" alt="Julie Roelants">
+            </div>
+            <div>
+              <div class="testimonial-name">Julie Roelants</div>
+              <div class="testimonial-title">Loyal Custommer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+ 
+{% endblock %}
