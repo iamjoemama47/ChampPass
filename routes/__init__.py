@@ -8,6 +8,7 @@ from .login import login_bp
 from  .changepw import changepw_bp
 from .gebruikers import gebruikers_bp
 from .gebruikerdetail import gebruikerdetail_bp
+from .stadion import stadion_bp
 
 
 def register_blueprints(app):
@@ -18,3 +19,4 @@ def register_blueprints(app):
     app.register_blueprint(changepw_bp)  
     app.register_blueprint(gebruikers_bp)  
     app.register_blueprint(gebruikerdetail_bp)
+    app.register_blueprint(stadion_bp)
