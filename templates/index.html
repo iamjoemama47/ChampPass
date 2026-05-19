@@ -43,8 +43,18 @@
             <span class="guitar-title">Barca VS Newcastle</span>
           </div>
           <div class="guitar-neck">
-            <img src="{{ url_for('static',filename='img/match achtergrond.jpg')}}" height="300" width="550">
-              <img class="logo"src="{{ url_for('static',filename='img/logos/arsenal.png')}}" height="40" width="40">
+              <table style="background-image: url('/static/img/match achtergrond.jpg'); background-repeat: no-repeat; background-size: contain;  background-position:center;" height=300" width="533">
+                <tr style="position: center;">
+                  <td style="width:20%; padding-left: 50px"><img class="logo"src="{{ url_for('static',filename='img/logos/arsenal.png')}}" height="80" width="80"></td>
+                  <td style="width:60%"></td>
+                  <td style="width:20%; padding-right: 40px"><img class="logo"src="{{ url_for('static',filename='img/logos/psg.png')}}" height="80" width="80"></td>
+                </tr>
+                <tr style="position: center;">
+                  <td style="width:30%; height: 80px; padding-left: 50px" class="match-club">Arsenal FC</td>
+                  <td style="width:40%"></td>
+                  <td style="width:30%; height: 80px; padding-right: 40px" class="match-club">PSG FC</td>
+                </tr>
+              </table>
           </div>
           <div class="guitar-footer">
             <div class="guitar-footer-row">
@@ -119,9 +129,9 @@
           <div class="pricing-name">Tickets</div>
           <div class="pricing-price">
             <span class="currency"></span>Barcelona VS Atletico Madrid
-              <img class="logo" src="logo's/barca.png" width="50" height="50" >
+              <img class="logo" src="{{ url_for('static',filename='img/logos/arsenal.png')}}" width="50" height="50" >
               <p >-</p>  
-              <img class="logo" src="logo's/atletico.png" width="50" height="50">  
+              <img class="logo" src="{{ url_for('static',filename='img/logos/psg.png')}}" width="50" height="50">  
           </div>
           <div class="pricing-billed"></div>
           <div class="pricing-savings"></div>
@@ -134,9 +144,9 @@
           <div class="pricing-name">Tickets</div>
           <div class="pricing-price">
             <span class="currency"></span>Barcelona VS Atletico Madrid
-              <img class="logo" src="logo's/barca.png" width="50" height="50" >
+              <img class="logo" src="{{ url_for('static',filename='img/logos/sporting.png')}}" width="50" height="50" >
               <p >-</p>  
-              <img class="logo" src="logo's/atletico.png" width="50" height="50">  
+              <img class="logo" src="{{ url_for('static',filename='img/logos/bayer.png')}}" width="50" height="50">  
           </div>
           <div class="pricing-billed"></div>
           <div class="pricing-savings"></div>
@@ -149,9 +159,9 @@
           <div class="pricing-name">Tickets</div>
           <div class="pricing-price">
             <span class="currency"></span>Barcelona VS Atletico Madrid
-              <img class="logo" src="logo's/barca.png" width="50" height="50" >
+              <img class="logo" src="{{ url_for('static',filename='img/logos/arsenal.png')}}" width="50" height="50" >
               <p >-</p>  
-              <img class="logo" src="logo's/atletico.png" width="50" height="50">  
+              <img class="logo" src="{{ url_for('static',filename='img/logos/barca.png')}}" width="50" height="50">  
           </div>
           <div class="pricing-billed"></div>
           <div class="pricing-savings"></div>

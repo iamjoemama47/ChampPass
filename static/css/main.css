@@ -771,9 +771,25 @@ nav {
 	border: 3px solid var(--roze);
 }
 
+.top-match {
+	position: relative;
+}
+
+.match-club {
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: var(--accent);
+}
+
 .logo {
 	margin-right: 5px;
 	margin-left: 5px;
+}
+
+.logo2 {
+	margin-right: 5px;
+	margin-left: 5px;
+	position: absolute;
 }
 
 .feature-icon {
