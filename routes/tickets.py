@@ -5,10 +5,10 @@ import mysql.connector
 from classes.ticket import Ticket
 
 
-ticketdetail_bp = Blueprint('ticketdetail', __name__)
+tickets_bp = Blueprint('tickets', __name__)
 mydb = db.Connect()
 
-@ticketdetail_bp.route('/ticketdetail/<int:ticket_id>')
+@tickets_bp.route('/tickets/<int:ticket_id>')
 def ticketdetail(ticket_id):
 
     try:
