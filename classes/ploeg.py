@@ -51,3 +51,4 @@ class Ploeg:
         mycursor.close()
     
     def get_by_id(the_db, ploeg_ID):
+            pass

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 
 import classes.dbconfig as db
-from classes.ploeg import Account
+#from classes.ploeg import Account
 import mysql.connector
 
 account_bp = Blueprint('account', __name__)
