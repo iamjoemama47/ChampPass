@@ -12,9 +12,9 @@ mydb = db.Connect()
 def tickets(wedstrijd_ID):
 
     try:
-        myticket=Wedstrijd.get_by_id(mydb,wedstrijd_ID)
+        mywedstrijd=Wedstrijd.get_by_id(mydb,wedstrijd_ID)
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van wedstrijden: {e}")
-        myticket = []
+        mywedstrijd = []
 
-    return render_template('tickets.html',ticket = myticket)
+    return render_template('tickets.html', wedstrijd = mywedstrijd)
