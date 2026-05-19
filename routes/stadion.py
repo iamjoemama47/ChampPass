@@ -11,9 +11,9 @@ mydb = db.Connect()
 def stadion():
 
     try:
-        lijst_stadion=Stadion.lijst_stadion(mydb)
+        lijst_stadions=Stadion.lijst_stadions(mydb)
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van stadion: {e}")
         lijst_stadion = []
 
-    return render_template('stadion.html',stadion = lijst_stadion)
+    return render_template('stadion.html',stadion = lijst_stadions)
