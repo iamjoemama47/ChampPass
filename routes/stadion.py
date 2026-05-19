@@ -1,0 +1,19 @@
+from flask import Blueprint, render_template
+
+import classes.dbconfig as db
+from classes.stadion import Stadion
+import mysql.connector
+
+stadion_bp = Blueprint('stadion', __name__)
+mydb = db.Connect()
+
+@stadion_bp.route('/stadion')
+def stadion():
+
+    try:
+        lijst_stadion=Stadion.lijst_stadion(mydb)
+    except mysql.connector.Error as e:
+        print(f"Fout bij ophalen van stadion: {e}")
+        lijst_stadion = []
+
+    return render_template('stadion.html',stadion = lijst_stadion)

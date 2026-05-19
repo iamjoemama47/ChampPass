@@ -28,7 +28,7 @@ class Stadion ():
         else:
             return None
     
-    def lijst_stadion(the_db):
+    def lijst_stadions(the_db):
         sqltxt = "Select stadion_ID,stadion_Naam,aantal_Zetels FROM stadion"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt,)

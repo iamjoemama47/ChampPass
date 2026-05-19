@@ -34,7 +34,13 @@ def register_blueprints(app):
     app.register_blueprint(stadions_bp)
     app.register_blueprint(ploeg_bp)
     app.register_blueprint(support_bp)
+<<<<<<< HEAD
+    app.register_blueprint(tickets_bp)
+    app.register_blueprint(account_bp)
+    app.register_blueprint(ploegdetail_bp)
+=======
     app.register_bleuprint(tickets_bp)
     app.register_bleuprint(account_bp)
     app.register_bleuprint(ploegdetail_bp)
 >>>>>>> 202eb97b4bf4fe16dfd6da5c22fde353bd4d6f8c
+>>>>>>> 928c80bc422cd312636d2ec372bef20ca3f53e94
