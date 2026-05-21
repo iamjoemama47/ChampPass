@@ -15,6 +15,7 @@ from .support import support_bp
 from .tickets import tickets_bp
 from .account import account_bp
 from .ploegdetail import ploegdetail_bp
+from .wedstrijden import wedstrijden_bp
 
 
 def register_blueprints(app):
@@ -32,3 +33,4 @@ def register_blueprints(app):
     app.register_blueprint(tickets_bp)
     app.register_blueprint(account_bp)
     app.register_blueprint(ploegdetail_bp)
+    app.register_blueprint(wedstrijden_bp)  
