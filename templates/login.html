@@ -4,29 +4,47 @@
 {% endblock %} 
 
 {% block body %} 
-<center>
-<div>
-    <h1>Login</h1>
-    <form action="/login" method="POST">
-        <table>
-            <tr>
-                <td>login,  , </td>
-                <td><input type="text" name="login" id="login"></td>
-            </tr>
-            <tr>
-                <td>paswoord   </td>
-                <td><input type="password" name="paswoord" id="paswoord"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="inloggen"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><span class="error">{{the_comment}}</span></td>
-            </tr>
-        </table>
-    </form>
-</div>
-</center>
+
+  <!-- choose us Section -->
+  <section class="features" id="instructors">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-title">Access your account</div>
+      </div>
+      <center>
+        <div class="guitar-card2" style="width: 40%;height: 300%;">
+          <center>
+            <div>
+              <h1>Login</h1>
+                <form action="/login" method="POST">
+                  <table>
+                    <tr>
+                      <td>username -  </td>
+                      <td><input type="text" name="login" id="login"></td>
+                    </tr>
+                    <tr>
+                      <p></p>
+                    </tr>
+                    <tr>
+                      <td>password - </td>
+                      <td><input type="password" name="paswoord" id="paswoord"></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><input type="submit" value="inloggen"></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><span class="error">{{the_comment}}</span></td>
+                    </tr>
+                </table>
+              </form>
+            </div>
+          </center>
+        </div>
+      </center>
+    </div>
+  </section>
+
+
 {% endblock %}
