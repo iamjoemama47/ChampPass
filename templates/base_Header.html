@@ -13,15 +13,15 @@
 <body>
       <nav>
     <div class="nav-container">
-      <a href="/index" class="logo">
+      <a href="/" class="logo">
         <img src="{{ url_for('static',filename='img/values/logo.png')}}" width="50" height="50">
         <span></span>ChampPass  
       </a>
       <ul class="nav-links">
-        <li><a href="/index#scores">Scores</a></li>
-        <li><a href="/index#tickets">Tickets</a></li>
-        <li><a href="#choice">Why choose us</a></li>
-        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="/#scores">Scores</a></li>
+        <li><a href="/#tickets">Tickets</a></li>
+        <li><a href="/#choice">Why choose us</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
         <li><a href="/stadion">Stadiums</a></li>
       </ul>
       <a href="" class="nav-cta"><span>Account</span></a> <!--DE HREF (LINK) AANPASSEN NAAR JUISTE PAGINA DUS LOGIN PAG EN CHECKOUT PAG-->
@@ -52,7 +52,7 @@
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/index" class="logo">
+          <a href="/" class="logo">
             <img src="{{ url_for('static',filename='img/logos/logo.png')}}" height="50" width="50">
             ChampPass
           </a>
@@ -61,7 +61,7 @@
         <div>
           <h4 class="footer-title">Tickets</h4>
           <ul class="footer-links">
-            <li><a href="#pricing">
+            <li><a href="/#tickets">
               Tickets</a></li>
             <li><a href="/stadion">Stadiums</a></li>
           </ul>
@@ -69,15 +69,15 @@
         <div>
           <h4 class="footer-title">Company</h4>
           <ul class="footer-links">
-            <li><a href="#instructors">Why Choose Us</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#choice">Why Choose Us</a></li>
+            <li><a href="/support">Contact</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-title">Customer Relations</h4>
           <ul class="footer-links">
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="">Account</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+            <li><a href="/login">Account</a></li>
           </ul>
         </div>
       </div>
