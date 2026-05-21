@@ -2,14 +2,15 @@ import mysql.connector
 from classes.dbconfig import Connect
 
 class Stadion ():
-    def __init__(self,stadion_ID=None,stadion_Naam=None,aantal_Zetels=None):
+    def __init__(self,stadion_ID=None,stadion_Naam=None,aantal_Zetels=None,foto_Stadion=None):
         self.stadion_ID=stadion_ID
         self.stadion_Naam=stadion_Naam
         self.aantal_Zetels=aantal_Zetels
-        
+        self.foto_Stadion=foto_Stadion
+
     def __repr__(self):
-        return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_Naam}, aantal_Zetels={self.aantal_Zetels})'
-        
+        return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_Naam}, aantal_Zetels={self.aantal_Zetels}, foto_Stadion={self.foto_Stadion})'
+
     #def create (self,the_db):
       #  sqltxt= "insert into Stadion(stadion_ID, stadion_Naam, aantal_Zetels) Values(%s,%s,%s)"
      #   mycursor=the_db.cursor()

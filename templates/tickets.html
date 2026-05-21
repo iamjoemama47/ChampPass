@@ -104,12 +104,12 @@ TemplateMo 606 String Master
           <a href="#" class="pricing-btn">Buy Now</a>
         </div>
 
-      
+      {% for wedstrijd in wedstrijden %}
 
         <div class="pricing-card">
           <div class="pricing-name">Ticket</div>
           <div class="pricing-price">
-            <span class="currency"></span>{{match_ID}}
+            <span class="currency"></span>{{wedstrijd.id}}
               <img class="logo" src="logo's/barca.png" width="50" height="50" >
               <p >-</p>  
               <img class="logo" src="logo's/atletico.png" width="50" height="50">  
