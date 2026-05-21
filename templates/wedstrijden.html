@@ -1,0 +1,116 @@
+{% extends 'base_Header.html' %}
+
+{% block head %}
+{% endblock %} 
+
+{% block body %} 
+
+
+
+    <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Tickets</div>
+        <h2 class="section-title">The best prices for you!</h2>
+        <p class="section-description">
+          Choose between different prices and experiences.
+        </p>
+      </div>
+      <div class="pricing-grid">
+
+      {% for wedstrijd in wedstrijden %}
+
+      <!-- Hier wordt een kaart gemaakt voor elke wedstrijd in de lijst van wedstrijden -->
+       <div class="pricing-card">
+          <div class="pricing-name">Ticket</div>
+          <div class="pricing-price">
+            <span class="currency"></span>{{wedstrijd.id}}
+              <img class="logo" src="/static/img/logos/{{wedstrijd.logo_Img1}}" width="50" height="50" >
+              <p >-</p>  
+              <img class="logo" src="/static/img/logos/{{wedstrijd.logo_Img2}}" width="50" height="50" >
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">VIP experience</p>
+            <table style="width:100%">
+              <tr>
+                <td>         
+    	            <ul class="pricing-features" style="margin-left:80px ;">
+                    <li>All 200+ video lessons</li>
+                    <li>Full song library (500+)</li>
+                    <li>AI feedback on playing</li>
+       	          </ul>
+                </td>
+                <td>
+    	            <img src="/static/img/stadion/{{wedstrijd.stadion_Naam}}" height="250" widht="300" style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
+                </td>
+              </tr>
+            </table>
+          <a href="#" class="pricing-btn">Buy Now </a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Ticket</div>
+          <div class="pricing-price">
+            <span class="currency"></span>{{wedstrijd.id}}
+              <img class="logo" src="/static/img/logos/{{wedstrijd.logo_Img1}}" width="50" height="50" >
+              <p >-</p>  
+              <img class="logo" src="/static/img/logos/{{wedstrijd.logo_Img2}}" width="50" height="50" >
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">Basic experience</p>
+            <table style="width:100%">
+              <tr>
+                <td>         
+    	            <ul class="pricing-features" style="margin-left:80px ;">
+                    <li>All 200+ video lessons</li>
+                    <li>Full song library (500+)</li>
+                    <li>AI feedback on playing</li>
+       	          </ul>
+                </td>
+                <td>
+    	            <img src="/static/img/stadion/{{wedstrijd.stadion_Naam}}" height="250" widht="300" style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
+                </td>
+              </tr>
+            </table>
+          <a href="#" class="pricing-btn">Buy Now</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Ticket</div>
+          <div class="pricing-price">
+            <span class="currency"></span>{{wedstrijd.id}}
+              <img class="logo" src="/static/img/logos/{{wedstrijd.logo_Img1}}" width="50" height="50" >
+              
+              <p >-</p>  
+              <img class="logo" src="/static/img/logos/{{wedstrijd.logo_Img2}}" width="50" height="50" >
+              
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">Budget experience</p>
+            <table style="width:100%">
+              <tr>
+                <td>         
+    	            <ul class="pricing-features" style="margin-left:80px ;">
+                    <li>All 200+ video lessons</li>
+                    <li>Full song library (500+)</li>
+                    <li>AI feedback on playing</li>
+       	          </ul>
+                </td>
+                <td>
+    	            <img src="/static/img/stadion/{{wedstrijd.stadion_Naam}}" height="250" widht="300" style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
+                </td>
+              </tr>
+            </table>
+          <a href="#" class="pricing-btn">Buy Now</a>
+        </div>
+        {% endfor %}
+
+
+        
+                      
+      </div>
+    </div>
+  </section>
+{% endblock %} 
