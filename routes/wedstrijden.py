@@ -8,13 +8,15 @@ from classes.wedstrijd import Wedstrijd
 wedstrijden_bp = Blueprint('wedstrijden', __name__)
 mydb = db.Connect()
 
-@wedstrijden_bp.route('/wedstrijden/<int:wedstrijd_id>')
-def wedstrijden(wedstrijd_ID):
+@wedstrijden_bp.route('/wedstrijden')
+def wedstrijden():
 
+    print("wedstrijden called")
     try:
-        mywedstrijd=Wedstrijd.get_by_id(mydb,wedstrijd_ID)
+        mywedstrijd=Wedstrijd.lijstWedstrijden(mydb)
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van wedstrijden: {e}")
         mywedstrijd = []
 
-    return render_template('tickets.html', wedstrijden = mywedstrijd)
+    print(wedstrijden)
+    return render_template('wedstrijden.html', wedstrijden = mywedstrijd)
