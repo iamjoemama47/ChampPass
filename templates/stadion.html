@@ -13,12 +13,12 @@
       </div>
       <div class="pricing-grid">
         
-
+      {% for stadion in stadions %}
         <div class="pricing-card">
-          <div class="pricing-name">Stadium</div>
+          <div class="pricing-name">Stadiums</div>
           <div class="pricing-price">
-            <span class="currency"></span>Camp Nou
-              <img class="logo" src="{{ url_for('static',filename='img/logos/barca.png')}}" width="50" height="50" > 
+            <span class="currency"></span>{{stadion.stadion_Naam}}
+              <img class="logo" src="/static/img/logos/{{stadion.stadion_Img}}" width="50" height="50" > 
           </div>
           <div class="pricing-billed"></div>
           <div class="pricing-savings"></div>
@@ -26,159 +26,22 @@
               <tr>
                 <td>         
     	            <ul class="pricing-features" style="margin-left:80px ;">
-                    <li>FC Bacelona home stadium</li>
-                    <li>99 354 seats</li>
-                    <li>VIP Lounge</li>
+                    <li>{{stadion.stadion_Naam}}</li>
+                    <li>{{stadion.aantal_Zetels}}</li>
        	          </ul>
                 </td>
                 <td>
                   <div class="testimonial-card"  style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
-                    <img src="{{ url_for('static',filename='img/stadium/camp_Nou.jpg')}}" height="250" widht="300">
+                    <img src="/static/img/stadion/{{stadion.stadion_Img}}" height="250" width="300">
                   </div>
                 </td>
               </tr>
             </table>
-          <a href="https://www.fcbarcelona.com/en/tickets/camp-nou-experience/4372933/match-day-tour-spotify-camp-nou?hl=en-US&ext=SEM_25-26_P02-7&utm_source=PMax&utm_medium=SEM&utm_campaign=Spotifycampnouexperience_EN_TKT_CNE_EU&gclsrc=aw.ds&gad_source=1&gad_campaignid=22310646874&gbraid=0AAAAAD7wiQb1cH7usm5PKdIrVvqqEo_eH&gclid=CjwKCAjw-8vPBhBbEiwAoA39WukniMJjUjQojwnXY4WUl9dRALqyIY1BmW26enrTLgIGj7O_1_2-VBoCDH4QAvD_BwE" target="blank" class="pricing-btn">See stadium</a>
-        </div>
+          <!--<a href="https://www.fcbarcelona.com/en/tickets/camp-nou-experience/4372933/match-day-tour-spotify-camp-nou?hl=en-US&ext=SEM_25-26_P02-7&utm_source=PMax&utm_medium=SEM&utm_campaign=Spotifycampnouexperience_EN_TKT_CNE_EU&gclsrc=aw.ds&gad_source=1&gad_campaignid=22310646874&gbraid=0AAAAAD7wiQb1cH7usm5PKdIrVvqqEo_eH&gclid=CjwKCAjw-8vPBhBbEiwAoA39WukniMJjUjQojwnXY4WUl9dRALqyIY1BmW26enrTLgIGj7O_1_2-VBoCDH4QAvD_BwE" target="blank" class="pricing-btn">See stadium</a>-->
+        </div> 
         
+        {% endfor %}
         
-        <div class="pricing-card">
-          <div class="pricing-name">Stadium</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Santiago Bernabeu
-              <img class="logo" src="{{ url_for('static',filename='img/logos/real_Madrid.png')}}" width="50" height="50" > 
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <table style="width:100%">
-              <tr>
-                <td>         
-    	            <ul class="pricing-features" style="margin-left:80px ;">
-                    <li>Real Madrid FC home stadium</li>
-                    <li>84 000 seats</li>
-                    <li>VIP Lounge</li>
-       	          </ul>
-                </td>
-                <td>
-                  <div class="testimonial-card"  style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
-                    <img src="{{ url_for('static',filename='img/stadium/santiago_Bernabeu.webp')}}" height="250" widht="300">
-                  </div>
-                </td>
-              </tr>
-            </table>
-          <a href="https://bernabeu.realmadrid.com/en-US" target="blank" class="pricing-btn">See stadium</a>
-        </div>
-        
-        
-        <div class="pricing-card">
-          <div class="pricing-name">Stadium</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Emirates stadium
-              <img class="logo" src="{{ url_for('static',filename='img/logos/arsenal.png')}}" width="50" height="50" > 
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <table style="width:100%">
-              <tr>
-                <td>         
-    	            <ul class="pricing-features" style="margin-left:80px ;">
-                    <li>Arsenal FC home stadium</li>
-                    <li>60 704 seats</li>
-                    <li>VIP Lounge</li>
-       	          </ul>
-                </td>
-                <td>
-                  <div class="testimonial-card"  style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
-                    <img src="{{ url_for('static',filename='img/stadium/emirates.jpg')}}" height="250" widht="300">
-                  </div>
-                </td>
-              </tr>
-            </table>
-          <a href="https://www.arsenal.com/the-club/emirates-stadium" target="blank" class="pricing-btn">See stadium</a>
-        </div>
-        
-        
-        <div class="pricing-card">
-          <div class="pricing-name">Stadium</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Allianz arena
-              <img class="logo" src="{{ url_for('static',filename='img/logos/bayer.png')}}" width="50" height="50" > 
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <table style="width:100%">
-              <tr>
-                <td>         
-    	            <ul class="pricing-features" style="margin-left:80px ;">
-                    <li>FC Bayern Munich home stadium</li>
-                    <li>75 024 seats</li>
-                    <li>VIP Lounge</li>
-       	          </ul>
-                </td>
-                <td>
-                  <div class="testimonial-card"  style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
-                    <img src="{{ url_for('static',filename='img/stadium/allianz.jpg')}}" height="250" widht="300">
-                  </div>
-                </td>
-              </tr>
-            </table>
-          <a href="https://allianz-arena.com/en" target="blank" class="pricing-btn">See stadium</a>
-        </div>
-        
-        
-        <div class="pricing-card">
-          <div class="pricing-name">Stadium</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Etihad stadium
-              <img class="logo" src="{{ url_for('static',filename='img/logos/manchester_City.png')}}" width="50" height="50" > 
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <table style="width:100%">
-              <tr>
-                <td>         
-    	            <ul class="pricing-features" style="margin-left:80px ;">
-                    <li>Manchester city FC home stadium</li>
-                    <li>53 400 seats</li>
-                    <li>basic seats</li>
-       	          </ul>
-                </td>
-                <td>
-                  <div class="testimonial-card"  style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
-                    <img src="{{ url_for('static',filename='img/stadium/etihad.jpg')}}" height="250" widht="300">
-                  </div>
-                </td>
-              </tr>
-            </table>
-          <a href="https://www.mancity.com/etihad-stadium" target="blank" class="pricing-btn">See stadium</a>
-        </div>
-        
-        
-        <div class="pricing-card">
-          <div class="pricing-name">Stadium</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Parc Des Princes
-              <img class="logo" src="{{ url_for('static',filename='img/logos/psg.png')}}" width="50" height="50" > 
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <table style="width:100%">
-              <tr>
-                <td>         
-    	            <ul class="pricing-features" style="margin-left:80px ;">
-                    <li>Paris Saint Germain home stadium</li>
-                    <li>46 780 seats</li>
-                    <li>basic seats</li>
-       	          </ul>
-                </td>
-                <td>
-                  <div class="testimonial-card"  style="float:right ;margin-bottom: 30px ;margin-right: 30px;">
-                    <img src="{{ url_for('static',filename='img/stadium/parc_Des_Princes.jpg')}}" height="250" widht="300">
-                  </div>
-                </td>
-              </tr>
-            </table>
-          <a href="https://www.psg.fr/le-club/installations/parc-des-princes" target="blank" class="pricing-btn">See stadium</a>
         </div>
       </div>
     </div>

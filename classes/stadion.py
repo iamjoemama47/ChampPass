@@ -2,11 +2,11 @@ import mysql.connector
 from classes.dbconfig import Connect
 
 class Stadion ():
-    def __init__(self,stadion_ID=None,stadion_Naam=None,aantal_Zetels=None,foto_Stadion=None):
+    def __init__(self,stadion_ID=None,stadion_Naam=None,aantal_Zetels=None,stadion_Img=None):
         self.stadion_ID=stadion_ID
         self.stadion_Naam=stadion_Naam
         self.aantal_Zetels=aantal_Zetels
-        self.foto_Stadion=foto_Stadion
+        self.stadion_Img=stadion_Img
 
     def __repr__(self):
         return f'stadion(stadion_ID={self.stadion_ID},stadion_naam={self.stadion_Naam}, aantal_Zetels={self.aantal_Zetels}, foto_Stadion={self.foto_Stadion})'
