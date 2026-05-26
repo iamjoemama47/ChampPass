@@ -1,3 +1,5 @@
+from unittest import result
+
 import mysql.connector
 from classes.dbconfig import Connect
 
@@ -52,17 +54,5 @@ class Stadion ():
         mycursor.close()
     
 #get foto by id
-    def get_by_id(the_db,stadion_ID):
-        sqltxt= "Select stadion_ID ,stadion_Naam , aantal_Zetels FROM stadion WHERE stadion_ID = %s"
-        mycursor=the_db.cursor()
-        mycursor.execute(sqltxt,(stadion_ID,))
-        result= mycursor.fetchone()
-        mycursor.close()
-        if result:
-            return Stadion(*result)
-        else:
-            return None
 
-        
-        
     
