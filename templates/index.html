@@ -14,11 +14,11 @@
         <div class="hero-badge">
           <span>●</span> Top match at the moment 
           </div>
-          {% for wedstrijd in wedstrijden %}
+          {% for eersteWedstrijd in wedstrdijd %}
             <h1></span><span class="title">{{wedstrijd.ploeg_Naam1}} </span><span class="highlight"> against </span><span class="title">{{wedstrijd.ploeg_Naam2}} </span></h1>
           {% endfor  %}
           <p class="hero-description">
-            Buy your tickets here for the best match of the moment: Who will win in the round of 16 Barcelona or Newcastle
+            Buy your tickets here for the best match of the moment: Who will win
           </p>
         <div class="hero-buttons">
           <a href="/#tickets" class="btn-primary">
@@ -47,14 +47,22 @@
           <div class="guitar-neck">
               <table style="background-image: url('/static/img/match achtergrond.jpg'); background-repeat: no-repeat; background-size: contain;  background-position:center;" height=300" width="533">
                 <tr style="position: center;">
-                  <td style="width:20%; padding-left: 50px"><img class="logo"src="{{ url_for('static',filename='img/logos/arsenal.png')}}" height="80" width="80"></td>
-                  <td style="width:60%"></td>
-                  <td style="width:20%; padding-right: 40px"><img class="logo"src="{{ url_for('static',filename='img/logos/psg.png')}}" height="80" width="80"></td>
+                  {% for wedstrijd in wedstrijden %}
+                    <td style="width:20%; padding-left: 50px"><img class="logo"src="/static/img/logos/{{wedstrijd.logo_Img1}}" height="80" width="80"></td>
+                  {% endfor %}  
+                    <td style="width:60%"></td>
+                  {% for wedstrijd in wedstrijden %}
+                    <td style="width:20%; padding-right: 40px"><img class="logo"src="/static/img/logos/{{wedstrijd.logo_Img2}}" height="80" width="80"></td>
+                  {% endfor %}  
                 </tr>
                 <tr style="position: center;">
-                  <td style="width:30%; height: 80px; padding-left: 50px" class="match-club">Arsenal FC</td>
+                  {% for wedstrijd in wedstrijden %}
+                    <td style="width:30%; height: 80px; padding-left: 50px" class="match-club">{{wedstrijd.ploeg_Naam1}}</td>
+                  {% endfor %}  
                   <td style="width:40%"></td>
-                  <td style="width:30%; height: 80px; padding-right: 40px" class="match-club">PSG FC</td>
+                  {% for wedstrijd in wedstrijden %}
+                    <td style="width:30%; height: 80px; padding-right: 40px" class="match-club">{{wedstrijd.ploeg_Naam2}}</td>
+                  {% endfor %}  
                 </tr>
               </table>
           </div>
@@ -142,7 +150,7 @@
           <p class="pricing-description">different experiences and prices</p>
           <ul class="pricing-features">
           </ul>
-          <a href="/tickets" class="pricing-btn">Vieuw prices</a>
+          <a href="/wedstrijden" class="pricing-btn">Vieuw prices</a>
         </div>
         <div class="pricing-card">
           <div class="pricing-name">Tickets</div>
@@ -157,7 +165,7 @@
           <p class="pricing-description">different experiences and prices</p>
           <ul class="pricing-features">
           </ul>
-          <a href="/tickets" class="pricing-btn">Vieuw prices</a>
+          <a href="/wedstrijden" class="pricing-btn">Vieuw prices</a>
         </div>
         <div class="pricing-card">
           <div class="pricing-name">Tickets</div>
@@ -172,7 +180,7 @@
           <p class="pricing-description">different experiences and prices</p>
           <ul class="pricing-features">
           </ul>
-          <a href="/tickets" class="pricing-btn">Vieuw prices</a>
+          <a href="/wedstrijden" class="pricing-btn">Vieuw prices</a>
         </div>
       </div>
     </div>
