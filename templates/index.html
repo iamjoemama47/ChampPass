@@ -14,9 +14,9 @@
         <div class="hero-badge">
           <span>●</span> Top match at the moment 
           </div>
-          {% for eersteWedstrijd in wedstrdijd %}
-            <h1></span><span class="title">{{wedstrijd.ploeg_Naam1}} </span><span class="highlight"> against </span><span class="title">{{wedstrijd.ploeg_Naam2}} </span></h1>
-          {% endfor  %}
+
+          <h1></span><span class="title">{{wedstrijd.ploeg_Naam1}} </span><span class="highlight"> against </span><span class="title">{{wedstrijd.ploeg_Naam2}} </span></h1>
+
           <p class="hero-description">
             Buy your tickets here for the best match of the moment: Who will win
           </p>
@@ -47,32 +47,22 @@
           <div class="guitar-neck">
               <table style="background-image: url('/static/img/match achtergrond.jpg'); background-repeat: no-repeat; background-size: contain;  background-position:center;" height=300" width="533">
                 <tr style="position: center;">
-                  {% for wedstrijd in wedstrijden %}
                     <td style="width:20%; padding-left: 50px"><img class="logo"src="/static/img/logos/{{wedstrijd.logo_Img1}}" height="80" width="80"></td>
-                  {% endfor %}  
                     <td style="width:60%"></td>
-                  {% for wedstrijd in wedstrijden %}
                     <td style="width:20%; padding-right: 40px"><img class="logo"src="/static/img/logos/{{wedstrijd.logo_Img2}}" height="80" width="80"></td>
-                  {% endfor %}  
                 </tr>
                 <tr style="position: center;">
-                  {% for wedstrijd in wedstrijden %}
                     <td style="width:30%; height: 80px; padding-left: 50px" class="match-club">{{wedstrijd.ploeg_Naam1}}</td>
-                  {% endfor %}  
                   <td style="width:40%"></td>
-                  {% for wedstrijd in wedstrijden %}
                     <td style="width:30%; height: 80px; padding-right: 40px" class="match-club">{{wedstrijd.ploeg_Naam2}}</td>
-                  {% endfor %}  
                 </tr>
               </table>
           </div>
           <div class="guitar-footer">
             <div class="guitar-footer-row">
-              <div class="footer-controls">
-              {% for wedstrijd in wedstrijden %}    
+              <div class="footer-controls"> 
                 <span class="guitar-title">{{wedstrijd.stadion_Naam}}</span>
                 <span class="guitar-title">{{wedstrijd.begin_Uur}}</span>
-              {% endfor  %} 
               </div>
             </div>
           </div>
