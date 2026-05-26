@@ -7,14 +7,16 @@
 
 
   <!-- Hero Section -->
-  <!-- TIP: To enable full-screen hero, uncomment "min-height: 100vh" in the .hero CSS -->
+<!-- TIP: To enable full-screen hero, uncomment "min-height: 100vh" in the .hero CSS -->
   <section class="hero">
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge">
           <span>●</span> Top match at the moment 
           </div>
-          <h1></span><span class="title">FC Barcelona </span><span class="highlight">against </span><span class="title">Newcastle United FC </span></h1>
+          {% for wedstrijd in wedstrijden %}
+            <h1></span><span class="title">{{wedstrijd.ploeg_Naam1}} </span><span class="highlight"> against </span><span class="title">{{wedstrijd.ploeg_Naam2}} </span></h1>
+          {% endfor  %}
           <p class="hero-description">
             Buy your tickets here for the best match of the moment: Who will win in the round of 16 Barcelona or Newcastle
           </p>
@@ -59,8 +61,10 @@
           <div class="guitar-footer">
             <div class="guitar-footer-row">
               <div class="footer-controls">
-                <span class="guitar-title">Camp nou stadium</span>
-                <span class="guitar-title">30/02/2090</span>
+              {% for wedstrijd in wedstrijden %}    
+                <span class="guitar-title">{{wedstrijd.stadion_Naam}}</span>
+                <span class="guitar-title">{{wedstrijd.begin_Uur}}</span>
+              {% endfor  %} 
               </div>
             </div>
           </div>
