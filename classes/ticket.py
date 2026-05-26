@@ -8,12 +8,9 @@ class Ticket():
         self.betaald=betaald
     def __repr__(self):
         return f'ticket(ticket_ID={self.ticket_ID},prijs={self.prijs}, klant_ID={self.klant_ID}, match_ID={self.match_ID}, aantal_tickets={self.aantal_tickets}, betaald={self.betaald})'
-    
-    def kopen ():
-        pass
-    def betalen():
-        pass
-    
+
+
+
     def createTicket(the_db, ticket_ID, prijs, klant_ID, match_ID):
         sqltxt = "INSERT INTO ticket (ticket_ID, prijs, klant_ID, match_ID) VALUES (%s, %s, %s, %s)"
         mycursor = the_db.cursor() 

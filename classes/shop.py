@@ -20,3 +20,5 @@ class Shop:
         mycursor.close()
     
     
+
+    
