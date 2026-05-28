@@ -9,3 +9,6 @@ mydb = db.Connect()
 #lijst
 myWedstrijd = Wedstrijd.lijstWedstrijden(mydb)
 print(myWedstrijd)
+
+myeerste = Wedstrijd.eersteWedstrijd(mydb)
+print(myeerste) 

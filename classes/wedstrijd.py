@@ -41,7 +41,7 @@ class Wedstrijd ():
         mycursor.execute(sqltxt)
         result = mycursor.fetchone()
         mycursor.close()
-        return [Wedstrijd(*row) for row in result]
+        return Wedstrijd(*result)
     
     def gespeeld (the_db):
         sqltxt = "Select * FROM wedstrijd inner join ploeg as a1  on wedstrijd.thuis = a1.ploeg_ID inner join ploeg as a2 on wedstrijd.bezoekers = a2.ploeg_ID inner join stadion on wedstrijd.stadion_ID = stadion.stadion_ID where  eind_Uur < NOW() order by eind_Uur ;"
