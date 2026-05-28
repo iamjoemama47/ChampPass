@@ -14,5 +14,5 @@ mydb = db.Connect()
 #print(myeerste) 
 
 
-myGespeelde = Wedstrijd.gespeeld(mydb)
+myGespeelde = Wedstrijd.eersteWedstrijd(mydb)
 print(myGespeelde)
