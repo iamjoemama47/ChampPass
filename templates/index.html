@@ -81,17 +81,23 @@
           Our website provides a real time score update on the latest played matches.
         </p>
       </div>
+
+      {% for wedstrijd in wedstrijden %} 
+
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <img class="logo"src="{{ url_for('static',filename='img/logos/arsenal.png')}}" height="40" width="40" 
+              <img src="/static/img/logos/{{wedstrijd.stadion_Naam}}" height="40" width="40" 
               <span> 1 - 1 </span>
-              <img class="logo"src="{{ url_for('static',filename='img/logos/real_Madrid.png ')}}" height="40" 
+              <img src="/static/img/logos/{{wedstrijd.stadion_Naam}}" height="40" width="40"
             </svg>
           </div>
           <h3>Bayern - Arsenal</h3>
         </div>
+        
+        {% endfor %}
+           
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
