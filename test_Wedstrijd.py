@@ -12,3 +12,6 @@ print(myWedstrijd)
 
 myeerste = Wedstrijd.eersteWedstrijd(mydb)
 print(myeerste) 
+
+myGespeelde = Wedstrijd.gespeeld(mydb)
+print(myGespeelde)

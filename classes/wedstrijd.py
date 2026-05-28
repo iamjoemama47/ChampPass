@@ -36,7 +36,7 @@ class Wedstrijd ():
         
 
     def eersteWedstrijd (the_db):
-        sqltxt = "Select wedstrijd_ID, begin_Uur, eind_Uur, a1.ploeg_Naam, a1.logo_Img, a2.ploeg_Naam,a2.logo_Img,  stadion.stadion_Naam FROM wedstrijd inner join ploeg as a1  on wedstrijd.thuis = a1.ploeg_ID inner join ploeg as a2 on wedstrijd.bezoekers = a2.ploeg_ID inner join stadion on wedstrijd.stadion_ID = stadion.stadion_ID where  begin_Uur <= NOW() order by begin_Uur ASC limit 1;" 
+        sqltxt = "Select wedstrijd_ID, begin_Uur, eind_Uur, a1.ploeg_Naam, a1.logo_Img, a2.ploeg_Naam,a2.logo_Img, stadion.stadion_Naam FROM wedstrijd inner join ploeg as a1  on wedstrijd.thuis = a1.ploeg_ID inner join ploeg as a2 on wedstrijd.bezoekers = a2.ploeg_ID inner join stadion on wedstrijd.stadion_ID = stadion.stadion_ID where  begin_Uur <= NOW() order by begin_Uur ASC limit 1;" 
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt)
         result = mycursor.fetchone()
@@ -44,10 +44,10 @@ class Wedstrijd ():
         return Wedstrijd(*result)
     
     def gespeeld (the_db):
-        sqltxt = "Select * FROM wedstrijd inner join ploeg as a1  on wedstrijd.thuis = a1.ploeg_ID inner join ploeg as a2 on wedstrijd.bezoekers = a2.ploeg_ID inner join stadion on wedstrijd.stadion_ID = stadion.stadion_ID where  eind_Uur < NOW() order by eind_Uur ;"
+        sqltxt = "Select wedstrijd_ID, begin_Uur, eind_Uur, a1.ploeg_Naam, a1.logo_Img, a2.ploeg_Naam, a2.logo_Img, stadion_Naam FROM wedstrijd inner join ploeg as a1  on wedstrijd.thuis = a1.ploeg_ID inner join ploeg as a2 on wedstrijd.bezoekers = a2.ploeg_ID inner join stadion on wedstrijd.stadion_ID = stadion.stadion_ID where  eind_Uur < NOW() order by eind_Uur ;"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt)
         result = mycursor.fetchone()
         mycursor.close()
-        return [Wedstrijd(*row) for row in result]
+        return Wedstrijd(*result)
     
