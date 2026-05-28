@@ -7,11 +7,12 @@ import classes.dbconfig as db
 mydb = db.Connect()
 
 #lijst
-myWedstrijd = Wedstrijd.lijstWedstrijden(mydb)
-print(myWedstrijd)
+#myWedstrijd = Wedstrijd.lijstWedstrijden(mydb)
+#print(myWedstrijd)
 
-myeerste = Wedstrijd.eersteWedstrijd(mydb)
-print(myeerste) 
+#myeerste = Wedstrijd.eersteWedstrijd(mydb)
+#print(myeerste) 
+
 
 myGespeelde = Wedstrijd.gespeeld(mydb)
 print(myGespeelde)
