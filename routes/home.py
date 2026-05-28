@@ -18,7 +18,7 @@ def home():
 
 
     try:
-        mywedstrijd=Wedstrijd.eerstWedstrijd(mydb)
+        mywedstrijd=Wedstrijd.eersteWedstrijd(mydb)
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van wedstrijden: {e}")
         mywedstrijd = []
