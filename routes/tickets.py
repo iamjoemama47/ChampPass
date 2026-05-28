@@ -17,4 +17,4 @@ def tickets(wedstrijd_ID):
         print(f"Fout bij ophalen van wedstrijden: {e}")
         mywedstrijd = []
 
-    return render_template('tickets.html', wedstrijden = mywedstrijd)
+    return render_template('wedstrijden.html', wedstrijden = mywedstrijd)

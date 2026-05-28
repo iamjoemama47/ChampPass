@@ -18,7 +18,7 @@ def home():
 
 
     try:
-        mywedstrijd=Wedstrijd.lijstWedstrijden(mydb)
+        mywedstrijd=Wedstrijd.eerstWedstrijd(mydb)
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van wedstrijden: {e}")
         mywedstrijd = []
@@ -26,4 +26,4 @@ def home():
 
     #hier komt de code voor de homepage
     print(mywedstrijd)
-    return render_template('index.html', wedstrijden = mywedstrijd)
+    return render_template('index.html', wedstrijd = mywedstrijd)
