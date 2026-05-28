@@ -82,26 +82,21 @@
         </p>
       </div>
       <div class="features-grid">
+
+      {% for wedstrijd in home2  %} 
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <img class="logo"src="/static/img/logos/{{wedstrijd.logo_Img1}}" height="40" width="40"> 
-              <span> 1 - 1 </span>
-              <img class="logo"src="/static/img/logos/{{wedstrijd.logo_Img2}}" height="40">
-            </svg>
-          </div>
-          <h3>{{wedstrijd.ploeg_Naam1}} - {{wedstrijd.ploeg_Naam2}}</h3>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <img class="logo"src="{{ url_for('static',filename='img/logos/barca.png')}}" height="40" width="40" 
+              <img class="logo"src="{{ url_for('static',filename='img/logos/barca.png')}}" height="40" width="40">
               <span> 3 - 0 </span>
-              <img class="logo"src="{{ url_for('static',filename='img/logos/manchester_City.png')}}" height="40" width="40"
+              <img class="logo"src="{{ url_for('static',filename='img/logos/manchester_City.png')}}" height="40" width="40">
             </svg>
           </div>
           <h3>Real Madrid - Barcelona</h3>
         </div>
+      {% endfor %}
+
+      
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="rect" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
