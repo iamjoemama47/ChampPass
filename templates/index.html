@@ -110,13 +110,16 @@
         </p>
       </div>
       <div class="pricing-grid">
+
+        {% for ticket in nog_Spelen %}
+
         <div class="pricing-card">
           <div class="pricing-name">Tickets</div>
           <div class="pricing-price">
-            <span class="currency"></span>Barcelona VS Atletico Madrid
-              <img class="logo" src="{{ url_for('static',filename='img/logos/arsenal.png')}}" width="50" height="50" >
+            <span class="currency"></span>{{ticket.ploeg_Naam1}} VS {{ticket.ploeg_Naam2}}
+              <img class="logo" src="/static/img/logos/{{ticket.logo_Img1}}" width="50" height="50" >
               <p >-</p>  
-              <img class="logo" src="{{ url_for('static',filename='img/logos/psg.png')}}" width="50" height="50">  
+              <img class="logo" src="/static/img/logos/{{ticket.logo_Img2}}" width="50" height="50">  
           </div>
           <div class="pricing-billed"></div>
           <div class="pricing-savings"></div>
@@ -125,36 +128,9 @@
           </ul>
           <a href="/tickets" class="pricing-btn">Vieuw prices</a>
         </div>
-        <div class="pricing-card">
-          <div class="pricing-name">Tickets</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Barcelona VS Atletico Madrid
-              <img class="logo" src="{{ url_for('static',filename='img/logos/sporting.png')}}" width="50" height="50" >
-              <p >-</p>  
-              <img class="logo" src="{{ url_for('static',filename='img/logos/bayer.png')}}" width="50" height="50">  
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <p class="pricing-description">different experiences and prices</p>
-          <ul class="pricing-features">
-          </ul>
-          <a href="/tickets" class="pricing-btn">Vieuw prices</a>
-        </div>
-        <div class="pricing-card">
-          <div class="pricing-name">Tickets</div>
-          <div class="pricing-price">
-            <span class="currency"></span>Barcelona VS Atletico Madrid
-              <img class="logo" src="{{ url_for('static',filename='img/logos/arsenal.png')}}" width="50" height="50" >
-              <p >-</p>  
-              <img class="logo" src="{{ url_for('static',filename='img/logos/barca.png')}}" width="50" height="50">  
-          </div>
-          <div class="pricing-billed"></div>
-          <div class="pricing-savings"></div>
-          <p class="pricing-description">different experiences and prices</p>
-          <ul class="pricing-features">
-          </ul>
-          <a href="/tickets" class="pricing-btn">Vieuw prices</a>
-        </div>
+
+        {% endfor %}
+
       </div>
     </div>
   </section>

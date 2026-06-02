@@ -27,8 +27,14 @@ def home():
         print(f"Fout bij ophalen van wedstrijden: {e}")
         myGespeeld = []
 
+    try:
+        mynog_Spelen=Wedstrijd.nog_Spelen(mydb)
+    except mysql.connector.Error as e:
+        print(f"Fout bij ophalen van wedstrijden: {e}")
+        mynog_Spelen = []
+
 
     #hier komt de code voor de homepage
     print(mywedstrijd)
-    return render_template('index.html', wedstrijd = mywedstrijd, gespeeld=myGespeeld)
+    return render_template('index.html', wedstrijd = mywedstrijd, gespeeld=myGespeeld, nog_Spelen=mynog_Spelen )
 
