@@ -34,11 +34,6 @@ def register_blueprints(app):
     
     app.register_blueprint(account_bp)
     app.register_blueprint(ploegdetail_bp)
-<<<<<<< HEAD
     app.register_blueprint(wedstrijden_bp)
     app.register_blueprint(tickets_bp)
-      
-=======
-    app.register_blueprint(wedstrijden_bp)  
     app.register_blueprint(shop_bp)
->>>>>>> e1c62de29484d42bed00c7fbd262e2015934f519
