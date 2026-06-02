@@ -15,15 +15,20 @@ def home():
     #if session['login'] == "":  #er is nog geen login gebeurd
     #            return render_template('login.html',the_comment="Je moet eerst inloggen")    
     #einde check login
-
-
     try:
         mywedstrijd=Wedstrijd.eersteWedstrijd(mydb)
     except mysql.connector.Error as e:
         print(f"Fout bij ophalen van wedstrijden: {e}")
         mywedstrijd = []
 
+    try:
+        myGespeeld=Wedstrijd.gespeeld(mydb)
+    except mysql.connector.Error as e:
+        print(f"Fout bij ophalen van wedstrijden: {e}")
+        myGespeeld = []
+
 
     #hier komt de code voor de homepage
     print(mywedstrijd)
-    return render_template('index.html', wedstrijd = mywedstrijd)
+    return render_template('index.html', wedstrijd = mywedstrijd, gespeeld=myGespeeld)
+

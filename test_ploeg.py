@@ -7,7 +7,7 @@ import classes.dbconfig as db
 mydb = db.Connect()
 
 #read
-myPloeg = Ploeg.readPloeg(mydb,"KAA Gent")
+myPloeg = Ploeg.readPloeg(mydb, "PSG")
 print(myPloeg)
 
 #lijst

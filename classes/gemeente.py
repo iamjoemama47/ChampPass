@@ -40,3 +40,4 @@ class Gemeente:
         result = mycursor.fetchall()
         mycursor.close()
         return [Gemeente(*row) for row in result]
+

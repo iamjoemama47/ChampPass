@@ -20,9 +20,11 @@ mydb = db.Connect()
 # read
 myGemeente = Gemeente.readGemeente(mydb,'Maldegem')
 print (myGemeente)
+
 #lijst
 myGemeente = Gemeente.lijst_gemeentes(mydb)
 print(myGemeente)
+
 #create
 myGemeente = Gemeente.createGemeente(mydb, 'Zeebrugge', 8380, 'BE')
 print(myGemeente)
