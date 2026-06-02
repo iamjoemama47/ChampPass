@@ -8,7 +8,7 @@ from .login import login_bp
 from .changepw import changepw_bp
 from .gebruikers import gebruikers_bp
 from .gebruikerdetail import gebruikerdetail_bp
-from .stadion import stadion_bp
+from .stadions import stadion_bp
 #from .stadions import stadions_bp
 from .ploegen import ploeg_bp
 from .support import support_bp
