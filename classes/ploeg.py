@@ -3,14 +3,15 @@ from classes.dbconfig import Connect
 
 
 class Ploeg:
-    def __init__(self, ploeg_ID=None, ploeg_Naam=None, gemeente_ID=None, stadion_ID=None):
+    def __init__(self, ploeg_ID=None, ploeg_Naam=None, gemeente_ID=None, stadion_ID=None, logo_Img=None):
         self.ploeg_ID = ploeg_ID
         self.ploeg_Naam = ploeg_Naam
         self.gemeente_ID = gemeente_ID
         self.stadion_ID = stadion_ID
+        self.logo_Img = logo_Img
 
     def __repr__(self):
-        return f'Ploeg (ploeg_ID={self.ploeg_ID},ploeg_Naam={self.ploeg_Naam}, gemeente_ID={self.gemeente_ID}, stadion_ID={self.stadion_ID})'
+        return f'Ploeg (ploeg_ID={self.ploeg_ID},ploeg_Naam={self.ploeg_Naam}, gemeente_ID={self.gemeente_ID}, stadion_ID={self.stadion_ID} logo_Img={self.logo_Img})'
     
     #def createPloeg(the_db, ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID):
      #   sqltxt="insert into Ploeg (ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID)Values(%s,%s,%s,%s)"
@@ -19,7 +20,7 @@ class Ploeg:
         #mycursor.close()
 
     def readPloeg(the_db, ploeg_Naam):
-        sqltxt= "Select ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID FROM ploeg where ploeg_Naam like %s"
+        sqltxt= "Select ploeg_ID, ploeg_Naam, gemeente_ID, stadion_ID, logo_Img FROM ploeg where ploeg_Naam like %s"
         mycursor=the_db.cursor()
         mycursor.execute(sqltxt,(ploeg_Naam,))
         result= mycursor.fetchone()
@@ -31,7 +32,7 @@ class Ploeg:
         
     
     def lijstPloeg(the_db):
-        sqltxt = "SELECT ploeg_ID, ploeg_Naam, stadion_ID, gemeente_ID FROM ploeg"
+        sqltxt = "SELECT ploeg_ID, ploeg_Naam, stadion_ID, gemeente_ID, logo_Img FROM ploeg"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt)
         result = mycursor.fetchall()

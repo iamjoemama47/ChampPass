@@ -16,4 +16,4 @@ def stadion():
         print(f"Fout bij ophalen van stadion: {e}")
         lijst_stadions = []
 
-    return render_template('stadion.html',stadion = lijst_stadions)
+    return render_template('stadion.html',stadions = lijst_stadions)

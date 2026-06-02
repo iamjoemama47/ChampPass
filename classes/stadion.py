@@ -10,6 +10,7 @@ class Stadion ():
         self.aantal_Zetels=aantal_Zetels
         self.stadion_Img=stadion_Img
         self.logo_Img=logo_Img
+        
        
 
     def __repr__(self):
@@ -34,7 +35,7 @@ class Stadion ():
             return None
     
     def lijst_stadions(the_db):
-        sqltxt = "Select stadion_ID,stadion_Naam,aantal_Zetels, stadion_Img FROM stadion"
+        sqltxt = "SELECT stadion.stadion_ID,stadion.stadion_Naam,stadion.aantal_Zetels,stadion.stadion_Img,ploeg.logo_Img FROM stadion INNER JOIN ploeg ON stadion.stadion_ID = ploeg.stadion_ID;"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt,)
         result = mycursor.fetchall()
