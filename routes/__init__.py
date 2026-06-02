@@ -35,5 +35,5 @@ def register_blueprints(app):
     app.register_blueprint(account_bp)
     app.register_blueprint(ploegdetail_bp)
     app.register_blueprint(wedstrijden_bp)
-    app.register_blueprint(tickets_bp)
     app.register_blueprint(shop_bp)
+    app.register_blueprint(tickets_bp)

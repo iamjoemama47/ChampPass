@@ -19,4 +19,4 @@ def wedstrijden():
         mywedstrijd = []
 
     print(wedstrijden)
-    return render_template('wedstrijden.html', wedstrijden = mywedstrijd)
+    return render_template('tickets.html', wedstrijden = mywedstrijd)
