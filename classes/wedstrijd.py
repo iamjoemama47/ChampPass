@@ -18,7 +18,7 @@ class Wedstrijd ():
         self.prijs2=prijs2
         self.prijs3=prijs3
 
-## zet hier alles van wat er in de onderste query wordt gevraagd
+
     def __repr__(self):
         return f'wedstijd (wedstrijd_ID={self.wedstrijd_ID},begin_Uur={self.begin_Uur}, eind_Uur={self.eind_Uur}, ploeg_Naam1={self.ploeg_Naam1}, logo_Img1={self.logo_Img1}, ploeg_Naam2={self.ploeg_Naam2}, logo_Img2={self.logo_Img2}, stadion_Naam={self.stadion_Naam}, stadion_Img={self.stadion_Img},score_ploeg_1={self.score_ploeg_1},score_ploeg_2={self.score_ploeg_2},prijs1={self.prijs1},prijs2={self.prijs2},prijs3={self.prijs3})'
     
